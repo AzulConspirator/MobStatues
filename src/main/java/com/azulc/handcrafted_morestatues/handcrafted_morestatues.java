@@ -1,5 +1,8 @@
 package com.azulc.handcrafted_morestatues;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.slf4j.Logger;
 
 import com.azulc.handcrafted_morestatues.block.entity.MoreStatueBlockItem;
@@ -18,6 +21,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
+
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
@@ -40,22 +44,35 @@ public class handcrafted_morestatues
     public static final DeferredRegister.Blocks BLOCKS                      = DeferredRegister.createBlocks(MODID);
     public static final DeferredRegister.Items ITEMS                        = DeferredRegister.createItems(MODID);
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, MODID);
+    public static final Map<String, RenderStyle> STATUE_STYLES = new HashMap<>();
     // ---------------------------------------
     // Register Blocks
     // ---------------------------------------
     public static final DeferredBlock<Block> ZOMBIE_STATUE      = registerStatue("zombie_statue", StatueVariant.LONG);
+    public static final DeferredBlock<Block> GUARDIAN_STATUE    = registerStatue("guardian_statue", StatueVariant.LONG, RenderStyle.COMPOSITE_ICE);
     public static final DeferredBlock<Block> ENDERMAN_STATUE    = registerStatue("enderman_statue", StatueVariant.TALL);
-    public static final DeferredBlock<Block> ALLAY_STATUE      = registerStatue("allay_statue", StatueVariant.WALL);
+    public static final DeferredBlock<Block> ALLAY_STATUE      = registerStatue("allay_statue", StatueVariant.WALL, RenderStyle.TRANSLUCENT);
     // ---------------------------------------
+    
+
     private static DeferredBlock<Block> registerStatue(String id, StatueVariant variant) {
-    BlockBehaviour.Properties props = BlockBehaviour.Properties.of()
-        .mapColor(MapColor.STONE)
-        .noOcclusion()
-        .isSuffocating((blkState, blockGetter, blockPos) -> false);
-    DeferredBlock<Block> registeredBlock = BLOCKS.register(id, () -> variant.create(props));
-    ITEMS.register(id, () -> new MoreStatueBlockItem(registeredBlock.get(), new Item.Properties()));
-    return registeredBlock;
+        return registerStatue(id, variant, RenderStyle.SOLID); // Defaults to solid
     }
+
+    private static DeferredBlock<Block> registerStatue(String id, StatueVariant variant, RenderStyle style) {
+        BlockBehaviour.Properties props = BlockBehaviour.Properties.of()
+            .mapColor(MapColor.STONE)
+            .noOcclusion()
+            .isSuffocating((blkState, blockGetter, pos) -> false);
+
+        DeferredBlock<Block> registeredBlock = BLOCKS.register(id, () -> variant.create(props));
+        ITEMS.register(id, () -> new MoreStatueBlockItem(registeredBlock.get(), new Item.Properties()));
+
+        STATUE_STYLES.put(id, style);
+
+        return registeredBlock;
+    }
+
     // ---------------------------------------
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<MoreStatueEntityBlock>> STATUE_ENTITY = BLOCK_ENTITIES.register("more_statue_entity_block", () -> {Block[] validBlocks = BLOCKS.getEntries().stream().map(DeferredHolder::get).toArray(Block[]::new); BlockEntityType.Builder<MoreStatueEntityBlock> builder = BlockEntityType.Builder.of(MoreStatueEntityBlock::new, validBlocks); return (BlockEntityType<MoreStatueEntityBlock>) builder.build(null);});
     // ---------------------------------------

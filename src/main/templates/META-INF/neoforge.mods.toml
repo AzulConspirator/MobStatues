@@ -95,6 +95,13 @@ versionRange="[4.0.0,)" # Ensures it uses a compatible GeckoLib 4.x version
 ordering="AFTER" # Ensures GeckoLib loads before your mod
 side="BOTH"
 
+[[dependencies.${mod_id}]]
+modId="cherishedworlds"
+type="optional"
+versionRange="[1,)" # Ensures it uses a compatible GeckoLib 4.x version
+ordering="BEFORE" # Ensures loads before your mod
+side="BOTH"
+
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares
 # that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't
 # stop your mod loading on the server for example.

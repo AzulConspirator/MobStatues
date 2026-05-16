@@ -5,6 +5,10 @@
     64,
     64
   ],
+  "textures": {
+        "all": "handcrafted_morestatues:blocks/allay_statue",
+		"particle": "handcrafted_morestatues:blocks/allay_statue"
+	},
   "display": {
     "thirdperson_righthand": {
       "rotation": [

@@ -11,10 +11,11 @@ import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import software.bernie.geckolib.renderer.GeoBlockRenderer;
 
 public class DynamicStatueRenderer extends GeoBlockRenderer<MoreStatueEntityBlock> {
-    public DynamicStatueRenderer() {
+    public DynamicStatueRenderer() 
+    {
         super(new DynamicStatueModel());
+        this.addRenderLayer(new com.azulc.handcrafted_morestatues.block.entity.client.renderer.layer.IceOverlayLayer(this));
     }
-
     @Override
     public void render(MoreStatueEntityBlock animatable, float partialTick, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, int packedOverlay)
      {
