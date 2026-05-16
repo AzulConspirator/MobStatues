@@ -47,7 +47,6 @@ public class Longblock extends baseblock{
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-        // If it's the foot, check floor. If it's the head, check if it's connected to a foot.
         if (state.getValue(PART) == BedPart.FOOT) {
             return Block.canSupportRigidBlock(level, pos.below());
         } else {
@@ -107,7 +106,6 @@ public class Longblock extends baseblock{
 
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        // TODO Auto-generated method stub
         return new MoreStatueEntityBlock(pos, state);
     }
 

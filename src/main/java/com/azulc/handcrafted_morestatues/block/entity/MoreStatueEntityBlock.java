@@ -19,18 +19,16 @@ public class MoreStatueEntityBlock extends BlockEntity implements GeoBlockEntity
         super(handcrafted_morestatues.STATUE_ENTITY.get(), pos, state);
     }
 
-@Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        // FIX 2: Explicitly tie the controller to your specific Block Entity class
-        controllers.add(new AnimationController<MoreStatueEntityBlock>(this, "controller", 0, this::predicate));
-    }
-
-    // FIX 3: Change the generic bounds from <E extends GeoAnimatable> to your specific class type
     private PlayState predicate(AnimationState<MoreStatueEntityBlock> state) {
         state.getController().setAnimation(RawAnimation.begin().then("idle", Animation.LoopType.LOOP));
         return PlayState.CONTINUE;
     }
 
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+        controllers.add(new AnimationController<MoreStatueEntityBlock>(this, "controller", 0, this::predicate));
+    }
+    
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return cache;

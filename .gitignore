@@ -39,3 +39,6 @@ run/
 repo/
 !**/src/**/repo/
 ensources/
+/src/**/BBmodel/
+/src/**/Samples/
+checklist.md

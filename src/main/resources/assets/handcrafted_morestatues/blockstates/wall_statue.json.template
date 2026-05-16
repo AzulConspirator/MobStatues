@@ -1,0 +1,13 @@
+{
+  "variants": 
+  {
+    "facing=north,waterlogged=false": {"model": "handcrafted:block/trophy/wolf_trophy"},
+    "facing=north,waterlogged=true": {"model": "handcrafted:block/trophy/wolf_trophy"},
+    "facing=east,waterlogged=false": {"model": "handcrafted:block/trophy/wolf_trophy","y":90 },
+    "facing=east,waterlogged=true": {"model": "handcrafted:block/trophy/wolf_trophy","y": 90 },
+    "facing=south,waterlogged=false": {"model": "handcrafted:block/trophy/wolf_trophy","y": 180},
+    "facing=south,waterlogged=true": {"model": "handcrafted:block/trophy/wolf_trophy","y": 180},
+    "facing=west,waterlogged=false": {"model": "handcrafted:block/trophy/wolf_trophy","y": 270},
+    "facing=west,waterlogged=true": {"model": "handcrafted:block/trophy/wolf_trophy","y": 270}
+  }
+}

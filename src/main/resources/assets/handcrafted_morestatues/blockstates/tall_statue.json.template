@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "facing=north,half=lower": { "model": "handcrafted_morestatues:block/wither_skeleton_statue" },
+    "facing=south,half=lower": { "model": "handcrafted_morestatues:block/wither_skeleton_statue", "y": 180 },
+    "facing=east,half=lower": { "model": "handcrafted_morestatues:block/wither_skeleton_statue", "y": 90 },
+    "facing=west,half=lower": { "model": "handcrafted_morestatues:block/wither_skeleton_statue", "y": 270 },
+    "half=upper": { "model": "handcrafted_morestatues:block/invisible" }
+  }
+}
