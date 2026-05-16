@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=north,part=foot": { "model": "morestatues:block/guardian_statue" },
+    "facing=south,part=foot": { "model": "morestatues:block/guardian_statue", "y": 180 },
+    "facing=east,part=foot": { "model": "morestatues:block/guardian_statue", "y": 90 },
+    "facing=west,part=foot": { "model": "morestatues:block/guardian_statue", "y": 270 },
+    "part=head": { "model": "morestatues:block/guardian_statue" }
+    
+  }
+}

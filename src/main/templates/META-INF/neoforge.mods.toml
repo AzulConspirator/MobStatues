@@ -46,7 +46,7 @@ displayName="${mod_name}" #mandatory
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Addon to Handcrafted by TerraFirmaMC, adds more Statues/Trophies/Wall Plaques to collect and craft.
+adds more Statues/Trophies/Wall Plaques to collect and craft.
 '''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
@@ -93,6 +93,13 @@ modId="geckolib"
 mandatory=true
 versionRange="[4.0.0,)" # Ensures it uses a compatible GeckoLib 4.x version
 ordering="AFTER" # Ensures GeckoLib loads before your mod
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="cherishedworlds"
+type="optional"
+versionRange="[1,)" # Ensures it uses a compatible GeckoLib 4.x version
+ordering="BEFORE" # Ensures loads before your mod
 side="BOTH"
 
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares
