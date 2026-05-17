@@ -6,8 +6,8 @@
     64
   ],
   "textures": {
-    "all": "handcrafted_morestatues:block/zombie_statue",
-		"particle": "handcrafted_morestatues:block/zombie_statue"
+    "all": "morestatues:block/zombie_statue",
+		"particle": "morestatues:block/zombie_statue"
 	},
   "display": {
     "thirdperson_righthand": {

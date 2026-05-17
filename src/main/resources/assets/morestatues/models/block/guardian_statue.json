@@ -6,8 +6,8 @@
     128
   ],
   "textures": {
-    "all": "handcrafted_morestatues:block/guardian_statue",
-		"particle": "handcrafted_morestatues:block/guardian_statue"
+    "all": "morestatues:block/guardian_statue",
+		"particle": "morestatues:block/guardian_statue"
 	},
   "display": {
     "thirdperson_righthand": {

@@ -6,8 +6,8 @@
     64
   ],
   "textures": {
-        "all": "handcrafted_morestatues:block/allay_statue",
-		"particle": "handcrafted_morestatues:block/allay_statue"
+        "all": "morestatues:block/allay_statue",
+		"particle": "morestatues:block/allay_statue"
 	},
   "display": {
     "thirdperson_righthand": {

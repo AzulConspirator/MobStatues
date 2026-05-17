@@ -1,7 +1,8 @@
 {
-  "itemGroup.handcrafted_morestatues": "Handcrafted: More Statues",
-  "block.handcrafted_morestatues.zombie_statue": "Zombie Statue",
-  "block.handcrafted_morestatues.enderman_statue": "Enderman Statue",
-  "block.handcrafted_morestatues.allay_statue": "Allay Plaque",
-  "block.handcrafted_morestatues.guardian_statue": "Encased Guardian"
+  "itemGroup.morestatues": "Handcrafted: More Statues",
+  "block.morestatues.zombie_statue": "Zombie Statue",
+  "block.morestatues.enderman_statue": "Enderman Statue",
+  "block.morestatues.allay_statue": "Allay Plaque",
+  "block.morestatues.guardian_statue": "Encased Guardian",
+  "block.morestatues.bosswither_statue": "Hanging Wither"
 }

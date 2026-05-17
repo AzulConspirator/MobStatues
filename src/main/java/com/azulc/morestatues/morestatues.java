@@ -50,8 +50,12 @@ public class morestatues
     // ---------------------------------------
     public static final DeferredBlock<Block> ZOMBIE_STATUE      = registerStatue("zombie_statue", StatueVariant.LONG);
     public static final DeferredBlock<Block> GUARDIAN_STATUE    = registerStatue("guardian_statue", StatueVariant.LONG, RenderStyle.COMPOSITE_ICE);
+    //
+    public static final DeferredBlock<Block> SKELETON_STATUE    = registerStatue("skeleton_statue", StatueVariant.TALL);
     public static final DeferredBlock<Block> ENDERMAN_STATUE    = registerStatue("enderman_statue", StatueVariant.TALL);
-    public static final DeferredBlock<Block> ALLAY_STATUE      = registerStatue("allay_statue", StatueVariant.WALL, RenderStyle.TRANSLUCENT);
+    //
+    public static final DeferredBlock<Block> BOSSWITHER_STATUE  = registerStatue("bosswither_statue", StatueVariant.WALL);
+    public static final DeferredBlock<Block> ALLAY_STATUE       = registerStatue("allay_statue", StatueVariant.WALL, RenderStyle.TRANSLUCENT);
     // ---------------------------------------
     
 
