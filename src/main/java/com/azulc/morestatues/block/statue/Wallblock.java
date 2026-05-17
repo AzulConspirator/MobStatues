@@ -1,5 +1,6 @@
 package com.azulc.morestatues.block.statue;
 
+import com.azulc.morestatues.morestatues;
 import com.azulc.morestatues.block.base.baseblock;
 import com.azulc.morestatues.block.entity.MoreStatueEntityBlock;
 import com.google.common.collect.ImmutableMap;
@@ -8,6 +9,7 @@ import com.mojang.serialization.MapCodec;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
@@ -38,10 +40,13 @@ public class Wallblock extends baseblock {
         return CODEC;
     }
 
+    @Override
     public @NotNull VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return AABBS.get(state.getValue(FACING));
+        String id = BuiltInRegistries.BLOCK.getKey(state.getBlock()).getPath();
+        VoxelShape registeredShape = morestatues.STATUE_SHAPES.getOrDefault(id, AABBS.get(state.getValue(FACING)));
+        return registeredShape;
     }
-
+    
     @Override
     public @NotNull RenderShape getRenderShape(BlockState state) {
         return RenderShape.ENTITYBLOCK_ANIMATED;

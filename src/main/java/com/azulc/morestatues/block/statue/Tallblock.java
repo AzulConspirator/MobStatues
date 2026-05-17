@@ -1,10 +1,12 @@
 package com.azulc.morestatues.block.statue;
 
+import com.azulc.morestatues.morestatues;
 import com.azulc.morestatues.block.base.baseblock;
 import com.azulc.morestatues.block.entity.MoreStatueEntityBlock;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -23,6 +25,7 @@ import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 import org.jetbrains.annotations.NotNull;
@@ -47,8 +50,18 @@ public class Tallblock extends baseblock {
         return CODEC;
     }
 
+    @Override
     public @NotNull VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return SHAPE;
+        String id = BuiltInRegistries.BLOCK.getKey(state.getBlock()).getPath();
+        VoxelShape registeredShape = morestatues.STATUE_SHAPES.getOrDefault(id, SHAPE);
+        if (registeredShape != SHAPE)
+        {
+            if (state.hasProperty(BlockStateProperties.DOUBLE_BLOCK_HALF)) 
+            {
+                return state.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.LOWER ? registeredShape : Shapes.empty(); // The upper half gets a standardized bounding column
+            }
+        }
+        return registeredShape;
     }
 
     @Override

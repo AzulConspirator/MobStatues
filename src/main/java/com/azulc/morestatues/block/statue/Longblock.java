@@ -3,6 +3,7 @@ package com.azulc.morestatues.block.statue;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -21,12 +22,9 @@ import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
+import com.azulc.morestatues.morestatues;
 import com.azulc.morestatues.block.base.baseblock;
 import com.azulc.morestatues.block.entity.MoreStatueEntityBlock;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Maps;
-
-import java.util.EnumMap;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -34,12 +32,7 @@ import org.jetbrains.annotations.Nullable;
 public class Longblock extends baseblock{
     public static final MapCodec<Longblock> CODEC = simpleCodec(Longblock::new);
     public static final EnumProperty<BedPart> PART = BlockStateProperties.BED_PART;
-    private static final EnumMap<Direction, VoxelShape> AABBS = Maps.newEnumMap(
-        ImmutableMap.of(
-            Direction.NORTH, Block.box(3, 0, 0, 13, 5, 16),
-            Direction.SOUTH, Block.box(3, 0, 0, 13, 5, 16),
-            Direction.EAST, Block.box(3, 0, 0, 16, 5, 13),
-            Direction.WEST, Block.box(3, 0, 0, 16, 5, 13)));
+    private static final VoxelShape SHAPE =  Block.box(0, 0, 0, 16, 5, 16);
 
     public Longblock(Properties properties) {
         super(properties);
@@ -54,8 +47,13 @@ public class Longblock extends baseblock{
         return CODEC;
     }
 
+    @Override
     public @NotNull VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return AABBS.get(state.getValue(FACING));
+        String id = BuiltInRegistries.BLOCK.getKey(state.getBlock()).getPath();
+        VoxelShape registeredShape = morestatues.STATUE_SHAPES.getOrDefault(id, SHAPE);
+        // note: it applies to both halves (less headache for directionality), best to keep them connected on the sides
+        // default is practically a slab, so it should be fine for most statues
+        return registeredShape;
     }
 
     @Override

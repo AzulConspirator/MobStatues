@@ -1,0 +1,142 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "builtin/entity",
+  "texture_size": [
+    64,
+    64
+  ],
+  "textures": {
+    "all": "morestatues:block/vex_statue",
+		"particle": "morestatues:block/vex_statue"
+	},
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        0,
+        97,
+        0
+      ],
+      "translation": [
+        -5.5,
+        -3.25,
+        0
+      ],
+      "scale": [
+        0.53,
+        0.53,
+        0.53
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        0,
+        97,
+        0
+      ],
+      "translation": [
+        -5.5,
+        -3.25,
+        0
+      ],
+      "scale": [
+        0.53,
+        0.53,
+        0.53
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        97,
+        0
+      ],
+      "translation": [
+        -1,
+        -1.75,
+        0
+      ],
+      "scale": [
+        0.53,
+        0.53,
+        0.53
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        97,
+        0
+      ],
+      "translation": [
+        -1,
+        -1.75,
+        0
+      ],
+      "scale": [
+        0.53,
+        0.53,
+        0.53
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        -1.5,
+        -5.25
+      ],
+      "scale": [
+        0.73,
+        0.73,
+        0.73
+      ]
+    },
+    "gui": {
+      "rotation": [
+        -24,
+        -150,
+        0
+      ],
+      "translation": [
+        3,
+        -5,
+        0
+      ],
+      "scale": [
+        0.87,
+        0.87,
+        0.87
+      ]
+    },
+    "head": {
+      "translation": [
+        0,
+        -8.75,
+        -14.25
+      ]
+    },
+    "fixed": {
+      "translation": [
+        0,
+        -10.75,
+        -7.75
+      ],
+      "scale": [
+        1.16,
+        1.16,
+        1.16
+      ]
+    },
+    "on_shelf": {
+      "rotation": [
+        0,
+        -180,
+        0
+      ],
+      "translation": [
+        0,
+        -3.5,
+        4
+      ]
+    }
+  }
+}
