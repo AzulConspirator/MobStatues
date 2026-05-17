@@ -1,9 +1,0 @@
-{
-  "variants": {
-    "facing=north,part=foot": { "model": "handcrafted_morestatues:block/guardian_statue" },
-    "facing=south,part=foot": { "model": "handcrafted_morestatues:block/guardian_statue", "y": 180 },
-    "facing=east,part=foot": { "model": "handcrafted_morestatues:block/guardian_statue", "y": 90 },
-    "facing=west,part=foot": { "model": "handcrafted_morestatues:block/guardian_statue", "y": 270 },
-    "part=head": { "model": "handcrafted_morestatues:block/invisible" }
-  }
-}

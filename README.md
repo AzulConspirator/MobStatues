@@ -1,10 +1,11 @@
-# handcrafted: More Statues (Neoforge 1.21.1)
+# AzulC's More Statues (Neoforge 1.21.1)
+
 ---
+aims to add simple blocks to act as Statues/Trophies for your minecraft home.
+
 handcrafted has trophies and statues that serves as great visual filler and good markers of achievement. aims to fill in the gaps of missing trophies and statues from that mod.
 
 Requires **Geckolib4**
-
-the name might mislead but this has no technical dependencies with that mod, so technically you can use this without handcrafted (but why tho)
 
 ## Design
 
