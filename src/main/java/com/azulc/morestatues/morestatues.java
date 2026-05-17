@@ -50,16 +50,18 @@ public class morestatues
     // ---------------------------------------
     // Register Blocks
     // ---------------------------------------
-    public static final DeferredBlock<Block> ZOMBIE_STATUE      = registerStatue("zombie_statue", StatueVariant.LONG);
-    public static final DeferredBlock<Block> GUARDIAN_STATUE    = registerStatue("guardian_statue", StatueVariant.LONG, RenderStyle.COMPOSITE_ICE,Shapes.block());
+    public static final DeferredBlock<Block> ZOMBIE_STATUE          = registerStatue("zombie_statue", StatueVariant.LONG);
+    public static final DeferredBlock<Block> GUARDIAN_STATUE        = registerStatue("guardian_statue", StatueVariant.LONG, RenderStyle.COMPOSITE_ICE,Shapes.block());
     //
-    public static final DeferredBlock<Block> WOLF_STATUE        = registerStatue("wolf_statue", StatueVariant.TALL,Block.box(2, 0, 2, 14, 18, 14));
-    public static final DeferredBlock<Block> SKELETON_STATUE    = registerStatue("skeleton_statue", StatueVariant.TALL);
-    public static final DeferredBlock<Block> ENDERMAN_STATUE    = registerStatue("enderman_statue", StatueVariant.TALL);
+    public static final DeferredBlock<Block> WOLF_STATUE            = registerStatue("wolf_statue", StatueVariant.TALL,Block.box(2, 0, 2, 14, 18, 14));
+    //public static final DeferredBlock<Block> SKELETON_STATUE      = registerStatue("skeleton_statue", StatueVariant.TALL);
+    public static final DeferredBlock<Block> GHAST_STATUE           = registerStatue("ghast_statue", StatueVariant.TALL,Block.box(-7, 0, -9, 23, 50, 21)); // got weird corner collision bug to fix
+    public static final DeferredBlock<Block> GHAST_FIREBALL_STATUE  = registerStatue("ghast_fireball_statue", StatueVariant.TALL); 
+    public static final DeferredBlock<Block> ENDERMAN_STATUE        = registerStatue("enderman_statue", StatueVariant.TALL);
     //
-    public static final DeferredBlock<Block> BOSSWITHER_STATUE  = registerStatue("bosswither_statue", StatueVariant.WALL,Block.box(-1, -26, 1, 17, 16, 14));
-    public static final DeferredBlock<Block> VEX_STATUE         = registerStatue("vex_statue", StatueVariant.WALL, RenderStyle.TRANSLUCENT);
-    public static final DeferredBlock<Block> ALLAY_STATUE       = registerStatue("allay_statue", StatueVariant.WALL, RenderStyle.TRANSLUCENT);
+    public static final DeferredBlock<Block> BOSSWITHER_STATUE      = registerStatue("bosswither_statue", StatueVariant.WALL,Block.box(-1, -26, 1, 17, 16, 14));
+    public static final DeferredBlock<Block> VEX_STATUE             = registerStatue("vex_statue", StatueVariant.WALL, RenderStyle.TRANSLUCENT);
+    public static final DeferredBlock<Block> ALLAY_STATUE           = registerStatue("allay_statue", StatueVariant.WALL, RenderStyle.TRANSLUCENT);
     // ---------------------------------------
     // Registration Helpers
     // ---------------------------------------

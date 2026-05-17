@@ -1,0 +1,56 @@
+{
+	"format_version": "1.21.110",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.ghast_fireball_statue",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [-0.5, 1, -0.5],
+					"cubes": [
+						{
+							"origin": [-0.5, 1, -0.5],
+							"size": [1, 21, 1],
+							"uv": {
+								"north": {"uv": [17, 40], "uv_size": [1, 22]},
+								"east": {"uv": [17, 40], "uv_size": [1, 22]},
+								"south": {"uv": [17, 40], "uv_size": [1, 22]},
+								"west": {"uv": [17, 40], "uv_size": [1, 22]},
+								"up": {"uv": [17, 40], "uv_size": [-2, -2]},
+								"down": {"uv": [17, 40], "uv_size": [-2, -2]}
+							}
+						},
+						{
+							"origin": [-2.5, 0, -2.5],
+							"size": [5, 1, 5],
+							"uv": {
+								"north": {"uv": [1, 51], "uv_size": [6, 1]},
+								"east": {"uv": [7, 51], "uv_size": [6, 1]},
+								"south": {"uv": [7, 51], "uv_size": [6, 1]},
+								"west": {"uv": [1, 51], "uv_size": [6, 1]},
+								"up": {"uv": [8, 46], "uv_size": [6, 6]},
+								"down": {"uv": [8, 52], "uv_size": [6, -6]}
+							}
+						}
+					]
+				},
+				{
+					"name": "Head",
+					"pivot": [0, 21, 0],
+					"rotation": [-40.42275, -14.57653, 22.39252],
+					"cubes": [
+						{"origin": [-4, 17, -4], "size": [8, 8, 8], "uv": [0, 0]},
+						{"origin": [-4, 17, -4], "size": [8, 8, 8], "inflate": 0.5, "uv": [32, 0]}
+					]
+				}
+			]
+		}
+	]
+}
