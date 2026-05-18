@@ -1,13 +1,15 @@
-# AzulC's More Statues (Neoforge 1.21.1)
+# ![AzulC's More Statues ](https://raw.githubusercontent.com/AzulConspirator/MoreStatues/refs/heads/main/img/proj_title.png)
 
----
-minecraft neoforge mod that aims to add simple blocks to act as Statues/Trophies for your museum.
+made for Neoforge-1.21.1
+
+```text
+mod that aims to add simple blocks to act as Statues/Trophies in style to be showcase in a minecraft museum exibit.
+```
 
 Requires [**Geckolib4**](https://modrinth.com/mod/geckolib/)
 
-## checklist
+## Mob Checklist
 
----
 Here is a comprehensive checklist of all official Minecraft mobs to the current version of this mod.
 
 <details>
@@ -15,8 +17,8 @@ Here is a comprehensive checklist of all official Minecraft mobs to the current 
 ---
 
 - [ ] Breeze - **Focused**
-- [ ] Blaze - **Focused**
-//
+- [X] Blaze - **Focused**
+
 - [ ] Creeper - **low**
 - [ ] Phantom - **low**
 - [X] Zombie / Husk / Drowned
@@ -24,17 +26,17 @@ Here is a comprehensive checklist of all official Minecraft mobs to the current 
 - [ ] Skeleton Horseman
 - [ ] Slime - **Focused**
 - [ ] Spider / Cave Spider - **low**
+
 - [X] Enderman
-//
+- [ ] Endermite **low**
+- [ ] Silverfish **low**
+
 - [ ] Ender Dragon
 - [ ] Warden
 - [X] Wither
-//
+
 - [X] Guardian / Elder Guardian
-//
-- [ ] Endermite
-- [ ] Silverfish
-//
+
 - [X] Ghast
 - [ ] Magma Cube - **Focused**
 - [ ] Piglin / Piglin Brute
@@ -42,17 +44,17 @@ Here is a comprehensive checklist of all official Minecraft mobs to the current 
 - [ ] Wither Skeleton
 - [ ] Zoglin / Hoglin
 - [ ] Strider
-//
+
 - [X] Allay
 - [ ] Sniffer
-//
+
 - [ ] Pillager - **low**
 - [ ] Ravager - **Focused**
 - [X] Vex
 - [ ] Vindicator - **low**
 - [ ] Evoker - **low**
 - [ ] Witch - **low**
-//
+
 - [ ] Bee
 - [ ] Goat
 - [ ] Llama
@@ -71,7 +73,7 @@ Here is a comprehensive checklist of all official Minecraft mobs to the current 
 - [ ] Parrot
 - [ ] Pig
 - [ ] Rabbit
-//
+
 - [ ] Dolphin
 - [ ] Axolotl
 - [ ] Frog
@@ -83,19 +85,13 @@ Here is a comprehensive checklist of all official Minecraft mobs to the current 
 
 </details>
 
-this mod started with the intentions of supplimenting Handcrafted's missing Trophies, most marked as **low** is mainly they already have it. il make my own version soon enough, il focus on patching up the missing ones first.
+this mod started with the intentions of supplimenting [Handcrafted](https://github.com/terrarium-earth/Handcrafted)'s missing Trophies, most marked as **low** is mainly they already have it. il make my own version soon enough, il focus on patching up the missing ones first.
 
 ## License
 
----
 this mod is under CC-BY 4.0.
 
 ```md
 feel free to port to another modloader, update to a newer MC version and include in modpacks with credit.
-also if it seems to be silent more than a year with no updates to the most recent mainline MC version (I use cobblemon & Create as a good measure), consider this abandoned by me feel free to take over.
+also if it seems to be silent more than a year with no updates to the most recent mainline MC version (I use cobblemon & Create as a good measure), consider this abandoned by me then feel free to take over.
 ```
-
-## extra note
-
----
-il also borrow some textures from the orignal repo (such as trophies bases) to better align with Handcrafted (it said MIT, here to hoping i dont get shot)
