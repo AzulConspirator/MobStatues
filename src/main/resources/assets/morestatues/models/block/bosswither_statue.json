@@ -5,7 +5,7 @@
     64,
     64
   ],
-    "textures": {
+  "textures": {
     "all": "morestatues:block/bosswither_statue",
 		"particle": "morestatues:block/bosswither_statue"
 	},
@@ -93,11 +93,11 @@
     "gui": {
       "rotation": [
         0,
-        146,
+        -146,
         0
       ],
       "translation": [
-        1,
+        -0.5,
         2,
         0
       ],
@@ -134,7 +134,7 @@
     "on_shelf": {
       "rotation": [
         0,
-        180,
+        -180,
         0
       ],
       "scale": [

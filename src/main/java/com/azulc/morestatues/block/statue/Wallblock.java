@@ -46,6 +46,12 @@ public class Wallblock extends baseblock {
         VoxelShape registeredShape = morestatues.STATUE_SHAPES.getOrDefault(id, AABBS.get(state.getValue(FACING)));
         return registeredShape;
     }
+    @Override
+    public @NotNull VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        String id = BuiltInRegistries.BLOCK.getKey(state.getBlock()).getPath();
+        VoxelShape registeredShape = morestatues.STATUE_SHAPES.getOrDefault(id, AABBS.get(state.getValue(FACING)));
+        return registeredShape;
+    }
     
     @Override
     public @NotNull RenderShape getRenderShape(BlockState state) {

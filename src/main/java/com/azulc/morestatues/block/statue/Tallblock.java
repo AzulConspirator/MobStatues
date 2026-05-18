@@ -65,6 +65,20 @@ public class Tallblock extends baseblock {
     }
 
     @Override
+    public @NotNull VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        String id = BuiltInRegistries.BLOCK.getKey(state.getBlock()).getPath();
+        VoxelShape registeredShape = morestatues.STATUE_SHAPES.getOrDefault(id, SHAPE);
+        if (registeredShape != SHAPE)
+        {
+            if (state.hasProperty(BlockStateProperties.DOUBLE_BLOCK_HALF)) 
+            {
+                return state.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.LOWER ? registeredShape : Shapes.empty(); // The upper half gets a standardized bounding column
+            }
+        }
+        return registeredShape;
+    }
+
+    @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING, WATERLOGGED, HALF);
     }

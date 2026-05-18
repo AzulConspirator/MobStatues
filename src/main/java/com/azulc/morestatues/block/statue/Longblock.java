@@ -55,6 +55,13 @@ public class Longblock extends baseblock{
         // default is practically a slab, so it should be fine for most statues
         return registeredShape;
     }
+    @Override   public @NotNull VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        String id = BuiltInRegistries.BLOCK.getKey(state.getBlock()).getPath();
+        VoxelShape registeredShape = morestatues.STATUE_SHAPES.getOrDefault(id, SHAPE);
+        // note: it applies to both halves (less headache for directionality), best to keep them connected on the sides
+        // default is practically a slab, so it should be fine for most statues
+        return registeredShape;
+    }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
