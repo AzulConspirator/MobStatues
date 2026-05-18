@@ -179,3 +179,14 @@ idea {
         downloadJavadoc = true
     }
 }
+
+tasks.named('processResources', ProcessResources) {
+    // This tells Gradle to simply overwrite duplicates rather than failing
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE 
+    
+    // If you want to force the specific version from your folder to take precedence
+    // ensure your folder is processed after other sources, then use:
+    // duplicatesStrategy = DuplicatesStrategy.EXCLUDE // (Keep first)
+    // OR
+    // duplicatesStrategy = DuplicatesStrategy.INCLUDE // (Keep last)
+}
