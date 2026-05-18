@@ -1,25 +1,99 @@
 # AzulC's More Statues (Neoforge 1.21.1)
 
 ---
-aims to add simple blocks to act as Statues/Trophies for your minecraft home.
+minecraft neoforge mod that aims to add simple blocks to act as Statues/Trophies for your museum.
 
-handcrafted has trophies and statues that serves as great visual filler and good markers of achievement. aims to fill in the gaps of missing trophies and statues from that mod.
+Requires [**Geckolib4**](https://modrinth.com/mod/geckolib/)
 
-Requires **Geckolib4**
+## checklist
 
-## Design
+---
+Here is a comprehensive checklist of all official Minecraft mobs to the current version of this mod.
 
-i will follow closely on how Handcrafted design language which are;
+<details>
+  <summary>Click here to expand</summary>
+---
 
-```md
-- Handcrafted had trophies but are visually more resemble exhibits are "handcrafted" and shown at museums.
-- Seems to Showcase their function (Skeleton has that bow, Phantom hanged from the ceiling).
-- Size isnt a priority. (wall Trophies arent to scale but do look cool)
-```
+- [ ] Breeze - **Focused**
+- [ ] Blaze - **Focused**
+//
+- [ ] Creeper - **low**
+- [ ] Phantom - **low**
+- [X] Zombie / Husk / Drowned
+- [ ] Skeleton / Bogged / Stray
+- [ ] Skeleton Horseman
+- [ ] Slime - **Focused**
+- [ ] Spider / Cave Spider - **low**
+- [X] Enderman
+//
+- [ ] Ender Dragon
+- [ ] Warden
+- [X] Wither
+//
+- [X] Guardian / Elder Guardian
+//
+- [ ] Endermite
+- [ ] Silverfish
+//
+- [X] Ghast
+- [ ] Magma Cube - **Focused**
+- [ ] Piglin / Piglin Brute
+- [ ] Zombified Piglin
+- [ ] Wither Skeleton
+- [ ] Zoglin / Hoglin
+- [ ] Strider
+//
+- [X] Allay
+- [ ] Sniffer
+//
+- [ ] Pillager - **low**
+- [ ] Ravager - **Focused**
+- [X] Vex
+- [ ] Vindicator - **low**
+- [ ] Evoker - **low**
+- [ ] Witch - **low**
+//
+- [ ] Bee
+- [ ] Goat
+- [ ] Llama
+- [ ] Panda
+- [ ] Polar Bear
+- [X] Wolf
+- [ ] Armadillo
+- [ ] Bat
+- [ ] Camel
+- [ ] Cat / Ocelot
+- [ ] Chicken
+- [ ] Sheep
+- [ ] Cow / Mooshroom
+- [ ] Fox
+- [ ] Horse / Skeleton Horse / Mule / Donkey
+- [ ] Parrot
+- [ ] Pig
+- [ ] Rabbit
+//
+- [ ] Dolphin
+- [ ] Axolotl
+- [ ] Frog
+- [ ] Pufferfish - **low**
+- [ ] Salmon / Cod - **low**
+- [ ] Squid / Glow Squid
+- [ ] Tropical Fish
+- [ ] Turtle
+
+</details>
+
+this mod started with the intentions of supplimenting Handcrafted's missing Trophies, most marked as **low** is mainly they already have it. il make my own version soon enough, il focus on patching up the missing ones first.
 
 ## License
 
-this mod is under MIT, feel free to port to another modloader, update to a newer MC version and include in modpacks.
+---
+this mod is under CC-BY 4.0.
+
+```md
+feel free to port to another modloader, update to a newer MC version and include in modpacks with credit.
+also if it seems to be silent more than a year with no updates to the most recent mainline MC version (I use cobblemon & Create as a good measure), consider this abandoned by me feel free to take over.
+```
 
 ## extra note
 
