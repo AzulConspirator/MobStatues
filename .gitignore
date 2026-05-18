@@ -42,3 +42,4 @@ ensources/
 /src/**/BBmodel/
 /src/**/Samples/
 checklist.md
+*/generated/
