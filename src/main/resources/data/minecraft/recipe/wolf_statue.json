@@ -5,6 +5,9 @@
     "A": {
       "item": "minecraft:beef"
     },
+    "B": {
+      "item": "minecraft:bone"
+    },
     "S": {
       "item": "minecraft:stick"
     }
@@ -12,7 +15,7 @@
   "pattern": [
     "SSS",
     "SAS",
-    "SSS"
+    "SBS"
   ],
   "result": {
     "count": 1,

@@ -3,17 +3,21 @@
 
   "block.morestatues.zombie_statue": "Zombie Statue",
   "block.morestatues.enderman_statue": "Enderman Statue",
+  "block.morestatues.skeleton_statue": "Skeleton Statue",
+  "block.morestatues.wolf_statue": "Wolf Statue",
+  "block.morestatues.slime_statue": "Slime in a Jar",
 
   "block.morestatues.allay_statue": "Allay Plaque",
   "block.morestatues.vex_statue": "Vex Plaque",
+  "block.morestatues.ravager_statue": "Ravager Wall Mount",
 
   "block.morestatues.guardian_statue": "Encased Guardian",
   "block.morestatues.bosswither_statue": "Hanging Wither",
 
-  "block.morestatues.skeleton_statue": "Skeleton Statue",
-  "block.morestatues.wolf_statue": "Wolf Statue",
-  
   "block.morestatues.ghast_statue": "Ghast Statue",
   "block.morestatues.ghast_fireball_statue": "Fireball Replica",
-  "block.morestatues.blaze_statue": "Blaze Statue"
+  "block.morestatues.blaze_statue": "Blaze Display",
+  "block.morestatues.piglin_brute_statue": "Piglin Brute Statue",
+
+  "block.morestatues.breeze_statue": "Breeze Display"
 }

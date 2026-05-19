@@ -1,0 +1,21 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"idle": {
+			"loop": true,
+			"animation_length": 5,
+			"bones": {
+				"tornado_body": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, "-360*2", 0]
+						},
+						"5.0": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		}
+	}
+}

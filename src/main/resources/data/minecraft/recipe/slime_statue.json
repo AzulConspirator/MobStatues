@@ -3,10 +3,10 @@
   "category": "misc",
   "key": {
     "A": {
-      "item": "minecraft:blaze_rod"
+      "item": "minecraft:slime_ball"
     },
     "B": {
-      "item": "minecraft:blaze_powder"
+      "item": "minecraft:glass"
     },
     "S": {
       "item": "minecraft:stick"
@@ -19,6 +19,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "morestatues:blaze_statue"
+    "id": "morestatues:slime_statue"
   }
 }

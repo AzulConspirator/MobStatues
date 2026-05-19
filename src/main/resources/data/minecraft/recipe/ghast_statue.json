@@ -5,6 +5,9 @@
     "A": {
       "item": "minecraft:ghast_tear"
     },
+    "B": {
+      "item": "minecraft:gunpowder"
+    },
     "S": {
       "item": "minecraft:stick"
     }
@@ -12,7 +15,7 @@
   "pattern": [
     "SSS",
     "SAS",
-    "SSS"
+    "SBS"
   ],
   "result": {
     "count": 1,

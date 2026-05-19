@@ -5,6 +5,9 @@
     "A": {
       "item": "minecraft:zombie_head"
     },
+    "B": {
+      "item": "minecraft:rotten_flesh"
+    },
     "S": {
       "item": "minecraft:stick"
     }
@@ -12,7 +15,7 @@
   "pattern": [
     "SSS",
     "SAS",
-    "SSS"
+    "SBS"
   ],
   "result": {
     "count": 1,

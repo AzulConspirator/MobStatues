@@ -3,10 +3,10 @@
   "category": "misc",
   "key": {
     "A": {
-      "item": "minecraft:blaze_rod"
+      "item": "minecraft:saddle"
     },
     "B": {
-      "item": "minecraft:blaze_powder"
+      "item": "minecraft:iron_ingot"
     },
     "S": {
       "item": "minecraft:stick"
@@ -19,6 +19,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "morestatues:blaze_statue"
+    "id": "morestatues:ravager_statue"
   }
 }

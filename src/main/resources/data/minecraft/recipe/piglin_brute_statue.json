@@ -3,10 +3,10 @@
   "category": "misc",
   "key": {
     "A": {
-      "item": "minecraft:blaze_rod"
+      "item": "minecraft:piglin_head"
     },
     "B": {
-      "item": "minecraft:blaze_powder"
+      "item": "minecraft:gold_ingot"
     },
     "S": {
       "item": "minecraft:stick"
@@ -19,6 +19,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "morestatues:blaze_statue"
+    "id": "morestatues:piglin_brute_statue"
   }
 }

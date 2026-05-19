@@ -3,66 +3,81 @@
   "parent": "builtin/entity",
   "texture_size": [
     64,
-    32
+    64
   ],
   "textures": {
-    "all": "morestatues:block/blaze_statue",
-		"particle": "morestatues:block/blaze_statue"
+    "all": "morestatues:block/piglin_brute_statue",
+		"particle": "morestatues:block/piglin_brute_statue"
 	},
   "display": {
     "thirdperson_righthand": {
       "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
         0,
-        125,
+        2.5,
         0
       ],
       "scale": [
-        0.58,
-        0.58,
-        0.58
+        0.375,
+        0.375,
+        0.375
       ]
     },
     "thirdperson_lefthand": {
       "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
         0,
-        125,
+        2.5,
         0
       ],
       "scale": [
-        0.58,
-        0.58,
-        0.58
+        0.375,
+        0.375,
+        0.375
       ]
     },
     "firstperson_righthand": {
       "rotation": [
         0,
-        125,
+        118,
         0
       ],
       "scale": [
-        0.58,
-        0.58,
-        0.58
+        0.4,
+        0.4,
+        0.4
       ]
     },
     "firstperson_lefthand": {
       "rotation": [
         0,
-        125,
+        118,
         0
       ],
       "scale": [
-        0.58,
-        0.58,
-        0.58
+        0.4,
+        0.4,
+        0.4
       ]
     },
     "ground": {
       "translation": [
         0,
-        -2,
+        -1.75,
         0
+      ],
+      "scale": [
+        0.83,
+        0.83,
+        0.83
       ]
     },
     "gui": {
@@ -72,14 +87,14 @@
         0
       ],
       "translation": [
-        -0.25,
-        -3,
+        0,
+        -4.75,
         0
       ],
       "scale": [
-        0.67,
-        0.67,
-        0.67
+        0.5,
+        0.5,
+        0.5
       ]
     },
     "head": {
@@ -92,13 +107,20 @@
     "fixed": {
       "translation": [
         0,
-        -4.5,
+        -8.25,
         0
       ],
       "scale": [
-        1.05,
-        1.05,
-        1.05
+        0.79,
+        0.79,
+        0.79
+      ]
+    },
+    "on_shelf": {
+      "rotation": [
+        0,
+        -180,
+        0
       ]
     }
   }

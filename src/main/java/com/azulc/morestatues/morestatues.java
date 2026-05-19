@@ -54,15 +54,20 @@ public class morestatues
     public static final DeferredBlock<Block> GUARDIAN_STATUE        = registerStatue("guardian_statue", StatueVariant.LONG, RenderStyle.COMPOSITE_ICE,Shapes.block());
     //
     public static final DeferredBlock<Block> WOLF_STATUE            = registerStatue("wolf_statue", StatueVariant.TALL,Block.box(2, 0, 2, 14, 18, 14));
-    //public static final DeferredBlock<Block> SKELETON_STATUE      = registerStatue("skeleton_statue", StatueVariant.TALL);
     public static final DeferredBlock<Block> GHAST_STATUE           = registerStatue("ghast_statue", StatueVariant.TALL,CONSTANTS.GhastShape());
     public static final DeferredBlock<Block> GHAST_FIREBALL_STATUE  = registerStatue("ghast_fireball_statue", StatueVariant.TALL); 
     public static final DeferredBlock<Block> ENDERMAN_STATUE        = registerStatue("enderman_statue", StatueVariant.TALL);
-    public static final DeferredBlock<Block> BLAZE_STATUE           = registerStatue("blaze_statue", StatueVariant.TALL);
+    //public static final DeferredBlock<Block> SKELETON_STATUE      = registerStatue("skeleton_statue", StatueVariant.TALL);
+    //public static final DeferredBlock<Block> WITHER_SKELETON_STATUE      = registerStatue("wither_skeleton_statue", StatueVariant.TALL);
     //
     public static final DeferredBlock<Block> BOSSWITHER_STATUE      = registerStatue("bosswither_statue", StatueVariant.WALL,Block.box(-1, -26, 1, 17, 16, 14));
     public static final DeferredBlock<Block> VEX_STATUE             = registerStatue("vex_statue", StatueVariant.WALL, RenderStyle.TRANSLUCENT);
     public static final DeferredBlock<Block> ALLAY_STATUE           = registerStatue("allay_statue", StatueVariant.WALL, RenderStyle.TRANSLUCENT);
+    public static final DeferredBlock<Block> BLAZE_STATUE           = registerStatue("blaze_statue", StatueVariant.WALL,Block.box(2, 0, 2, 14, 14, 14));
+    public static final DeferredBlock<Block> BREEZE_STATUE          = registerStatue("breeze_statue", StatueVariant.WALL,RenderStyle.COMPOSITE_ICE,Block.box(2, 0, 2, 14, 14, 14));
+    public static final DeferredBlock<Block> PIGLIN_BRUTE_STATUE    = registerStatue("piglin_brute_statue", StatueVariant.WALL,Block.box(2, 0, 2, 14, 18, 14));
+    public static final DeferredBlock<Block> RAVAGER_STATUE         = registerStatue("ravager_statue", StatueVariant.WALL);
+    public static final DeferredBlock<Block> SLIME_STATUE           = registerStatue("slime_statue", StatueVariant.WALL,RenderStyle.COMPOSITE_ICE,Block.box(2, 0, 2, 14, 14, 14));
     //#endregion
     // ---------------------------------------
     //#region Registration Helpers

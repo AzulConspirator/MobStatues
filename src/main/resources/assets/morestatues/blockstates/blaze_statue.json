@@ -1,9 +1,13 @@
 {
-  "variants": {
-    "facing=north,half=lower": { "model": "morestatues:block/blaze_statue" },
-    "facing=south,half=lower": { "model": "morestatues:block/blaze_statue", "y": 180 },
-    "facing=east,half=lower": { "model": "morestatues:block/blaze_statue", "y": 90 },
-    "facing=west,half=lower": { "model": "morestatues:block/blaze_statue", "y": 270 },
-    "half=upper": { "model": "morestatues:block/blaze_statue" }
+  "variants": 
+  {
+    "facing=north,waterlogged=false": {"model": "morestatues:block/blaze_statue"},
+    "facing=north,waterlogged=true": {"model": "morestatues:block/blaze_statue"},
+    "facing=east,waterlogged=false": {"model": "morestatues:block/blaze_statue","y":90 },
+    "facing=east,waterlogged=true": {"model": "morestatues:block/blaze_statue","y": 90 },
+    "facing=south,waterlogged=false": {"model": "morestatues:block/blaze_statue","y": 180},
+    "facing=south,waterlogged=true": {"model": "morestatues:block/blaze_statue","y": 180},
+    "facing=west,waterlogged=false": {"model": "morestatues:block/blaze_statue","y": 270},
+    "facing=west,waterlogged=true": {"model": "morestatues:block/blaze_statue","y": 270}
   }
 }

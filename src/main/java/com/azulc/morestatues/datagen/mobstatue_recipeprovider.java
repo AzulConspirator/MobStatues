@@ -28,23 +28,27 @@ public class mobstatue_recipeprovider extends RecipeProvider implements IConditi
     { 
         for (Block block : morestatues.BLOCKS.getEntries().stream().map(Holder::value).toList())
         {
-            Item item = switch (BuiltInRegistries.BLOCK.getKey(block).getPath()) 
+            Item[] item = switch (BuiltInRegistries.BLOCK.getKey(block).getPath()) 
             {
                 //case "creeper_statue" -> Items.CREEPER_HEAD;
                 //case "skeleton_statue" -> Items.SKELETON_SKULL;
                 //case "wither_skeleton_statue" -> Items.STONE_SWORD;
                 //case "piglin_statue" -> Items.PIGLIN_HEAD;
                 //case "stray_statue" -> Items.STRAY_SPAWN_EGG;
-                case "zombie_statue" -> Items.ZOMBIE_HEAD;
-                case "enderman_statue" -> Items.ENDER_PEARL;
-                case "guardian_statue" -> Items.PRISMARINE_SHARD;
-                case "bosswither_statue" -> Items.WITHER_SKELETON_SKULL;
-                case "blaze_statue" -> Items.BLAZE_ROD;
-                case "wolf_statue" -> Items.BEEF;
-                case "ghast_statue" -> Items.GHAST_TEAR;
-                case "ghast_fireball_statue" -> Items.FIRE_CHARGE;
-                case "allay_statue" -> Items.COOKIE;
-                case "vex_statue" -> Items.IRON_SWORD;
+                case "zombie_statue" -> new Item[]{Items.STICK, Items.ZOMBIE_HEAD, Items.ROTTEN_FLESH};
+                case "enderman_statue" -> new Item[]{Items.STICK, Items.ENDER_PEARL, Items.ENDER_EYE};
+                case "guardian_statue" -> new Item[]{Items.STICK, Items.PRISMARINE_SHARD, Items.PRISMARINE_CRYSTALS};
+                case "bosswither_statue" -> new Item[]{Items.STICK, Items.WITHER_SKELETON_SKULL,Items.WITHER_ROSE};
+                case "blaze_statue" -> new Item[]{Items.STICK, Items.BLAZE_ROD,Items.BLAZE_POWDER};
+                case "breeze_statue" -> new Item[]{Items.STICK, Items.BREEZE_ROD,Items.WIND_CHARGE};
+                case "wolf_statue" -> new Item[]{Items.STICK, Items.BEEF, Items.BONE};
+                case "ghast_statue" -> new Item[]{Items.STICK, Items.GHAST_TEAR, Items.GUNPOWDER};
+                case "piglin_brute_statue" -> new Item[]{Items.STICK, Items.PIGLIN_HEAD, Items.GOLD_INGOT};
+                case "ghast_fireball_statue" -> new Item[]{Items.STICK, Items.FIRE_CHARGE,Items.STICK};
+                case "allay_statue" -> new Item[]{Items.STICK, Items.COOKIE, Items.SWEET_BERRIES};
+                case "vex_statue" -> new Item[]{Items.STICK, Items.IRON_SWORD, Items.IRON_INGOT};
+                case "ravager_statue" -> new Item[]{Items.STICK, Items.SADDLE, Items.IRON_INGOT};
+                case "slime_statue" -> new Item[]{Items.STICK, Items.SLIME_BALL,Items.GLASS};
                 default -> null; // Handle unexpected cases
             };
             if (item != null) {
@@ -52,14 +56,15 @@ public class mobstatue_recipeprovider extends RecipeProvider implements IConditi
             }
         }
     }
-    private void addShaped(Block block_output,Item item, RecipeOutput recipeOutput) {
+    private void addShaped(Block block_output,Item[] items, RecipeOutput recipeOutput) {
         
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, block_output)
         .pattern("SSS")
         .pattern("SAS")
-        .pattern("SSS")
-        .define('S', Items.STICK)
-        .define('A', item)
+        .pattern("SBS")
+        .define('S', items[0])
+        .define('A', items[1])
+        .define('B', items[2])
         .unlockedBy(getName(), has(Items.STICK))
         .save(recipeOutput, BuiltInRegistries.BLOCK.getKey(block_output).getPath());
     }
