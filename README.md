@@ -1,9 +1,9 @@
-# ![AzulC's More Statues ](https://raw.githubusercontent.com/AzulConspirator/MoreStatues/refs/heads/main/img/proj_title.png)
+# ![AzulC's More Statues](https://raw.githubusercontent.com/AzulConspirator/MoreStatues/refs/heads/main/img/proj_title.png)
 
 made for Neoforge-1.21.1
 
 ```text
-mod that aims to add simple blocks to act as Statues/Trophies in style to be showcase in a minecraft museum exibit.
+mod that aims to add simple blocks to act as Displays/Statues/Trophies in style to be showcase in a minecraft museum exibit.
 ```
 
 Requires [**Geckolib4**](https://modrinth.com/mod/geckolib/)
@@ -12,18 +12,20 @@ Requires [**Geckolib4**](https://modrinth.com/mod/geckolib/)
 
 Here is a comprehensive checklist of all official Minecraft mobs to the current version of this mod.
 
+**Focused** are top priority to get more features
+**low** are priority lowered due to overlap/lack of ideas
+**/** are variant indicators (same model different texture) **[havent implement feature]**
+
 <details>
   <summary>Click here to expand</summary>
----
 
-- [X] Breeze - **Focused**
-- [X] Blaze - **Focused**
+- [X] Breeze
+- [X] Blaze
 
 - [ ] Creeper - **low**
 - [ ] Phantom - **low**
 - [X] Zombie / Husk / Drowned
-- [ ] Skeleton / Bogged / Stray
-- [ ] Skeleton Horseman
+- [ ] Skeleton / Bogged / Stray  - **Focused**
 - [X] Slime - **Focused**
 - [ ] Spider / Cave Spider - **low**
 
@@ -32,24 +34,24 @@ Here is a comprehensive checklist of all official Minecraft mobs to the current 
 - [ ] Silverfish **low**
 
 - [ ] Ender Dragon
-- [ ] Warden
+- [ ] Warden - **Focused**
 - [X] Wither
 
 - [X] Guardian / Elder Guardian
 
 - [X] Ghast
-- [ ] Magma Cube - **Focused**
+- [X] Magma Cube
 - [ ] Piglin / Piglin Brute
 - [ ] Zombified Piglin
-- [ ] Wither Skeleton
-- [ ] Zoglin / Hoglin
+- [ ] Wither Skeleton - **Focused**
+- [ ] Zoglin / Hoglin - **Focused**
 - [ ] Strider
 
 - [X] Allay
-- [ ] Sniffer
+- [ ] Sniffer - **Focused**
 
 - [ ] Pillager - **low**
-- [X] Ravager - **Focused**
+- [X] Ravager
 - [X] Vex
 - [ ] Vindicator - **low**
 - [ ] Evoker - **low**
@@ -87,11 +89,24 @@ Here is a comprehensive checklist of all official Minecraft mobs to the current 
 
 this mod started with the intentions of supplimenting [Handcrafted](https://github.com/terrarium-earth/Handcrafted)'s missing Trophies, most marked as **low** is mainly they already have it. il make my own version soon enough, il focus on patching up the missing ones first.
 
+## Modpacks
+
+You may use this mod in modpacks, videos, servers, and other projects. A link back to the Modrinth page is appreciated.
+
+## Credits
+
+Made it Solo Babyy!!
+Inspired by TerrariumMC's [Handcrafted](https://modrinth.com/mod/handcrafted)
+
 ## License
 
 this mod is under CC-BY 4.0.
 
+feel free to include in modpacks, videos, etc. Just link back to this page if possible
+For any general queries, DM me on Discord (prof_bones).
+
 ```md
-feel free to port to another modloader, update to a newer MC version and include in modpacks with credit.
-also if it seems to be silent more than a year with no updates to the most recent mainline MC version (I use cobblemon & Create as a good measure), consider this abandoned by me then feel free to take over.
+also if it seems to be silent more than a year with no updates to the most recent standard version of Modded MC (I use cobblemon & Create as a good measure), consider this abandoned by me then feel free to take over, contact me first tho.
 ```
+
+⚠ This mod ONLY exists on Modrinth as of May 2026. Any sites hosting this mod outside of Modrinth are not official releases. ⚠
