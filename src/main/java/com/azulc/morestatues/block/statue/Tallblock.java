@@ -23,7 +23,6 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -85,7 +84,7 @@ public class Tallblock extends baseblock {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, HALF);
+        builder.add(FACING, WATERLOGGED, HALF, VARIANT);
     }
 
     @Override
@@ -116,7 +115,7 @@ public class Tallblock extends baseblock {
         BlockPos pos = context.getClickedPos();
         Level level = context.getLevel();
         if (pos.getY() < level.getMaxBuildHeight() - 1 && level.getBlockState(pos.above()).canBeReplaced(context)) {
-            return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+            return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(VARIANT, 0);
         }
         return null;
     }

@@ -2,14 +2,14 @@ package com.azulc.morestatues.block.statue;
 
 import net.minecraft.world.level.block.Block;
 
-public enum StatueVariant {
+public enum StatueType {
     TALL(Tallblock::new),
     LONG(Longblock::new),
     WALL(Wallblock::new);
 
     private final java.util.function.Function<net.minecraft.world.level.block.state.BlockBehaviour.Properties, Block> factory;
 
-    StatueVariant(java.util.function.Function<net.minecraft.world.level.block.state.BlockBehaviour.Properties, Block> factory) 
+    StatueType(java.util.function.Function<net.minecraft.world.level.block.state.BlockBehaviour.Properties, Block> factory) 
     {
         this.factory = factory;
     }

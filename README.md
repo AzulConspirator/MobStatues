@@ -1,4 +1,4 @@
-# ![AzulC's More Statues](https://raw.githubusercontent.com/AzulConspirator/MoreStatues/refs/heads/main/img/proj_title.png)
+# ![AzulC's Mob Statues](https://raw.githubusercontent.com/AzulConspirator/MoreStatues/refs/heads/main/img/proj_title.png)
 
 made for Neoforge-1.21.1
 
@@ -21,52 +21,37 @@ Here is a comprehensive checklist of all official Minecraft mobs to the current 
 
 - [X] Breeze
 - [X] Blaze
-
-- [ ] Creeper - **low**
-- [ ] Phantom - **low**
 - [X] Zombie / Husk / Drowned
-- [ ] Skeleton / Bogged / Stray  - **Focused**
-- [X] Slime - **Focused**
-- [ ] Spider / Cave Spider - **low**
-
+- [X] Slime
 - [X] Enderman
-- [ ] Endermite **low**
-- [ ] Silverfish **low**
-
-- [ ] Ender Dragon
-- [ ] Warden - **Focused**
 - [X] Wither
-
 - [X] Guardian / Elder Guardian
-
 - [X] Ghast
 - [X] Magma Cube
-- [ ] Piglin / Piglin Brute
-- [ ] Zombified Piglin
-- [ ] Wither Skeleton - **Focused**
-- [ ] Zoglin / Hoglin - **Focused**
-- [ ] Strider
-
 - [X] Allay
-- [ ] Sniffer - **Focused**
-
-- [ ] Pillager - **low**
 - [X] Ravager
 - [X] Vex
-- [ ] Vindicator - **low**
-- [ ] Evoker - **low**
-- [ ] Witch - **low**
+- [X] Wolf
+- [X] Piglin / Piglin Brute
+- [X] Cat / Ocelot
+- [X] Skeleton / Bogged / Stray
 
+- [ ] Sniffer - **Focused**
+- [ ] Zoglin / Hoglin - **Focused**
+- [ ] Ender Dragon - **Focused**
+
+- [ ] Warden
+- [ ] Zombified Piglin
+- [ ] Wither Skeleton
+- [ ] Strider
 - [ ] Bee
 - [ ] Goat
 - [ ] Llama
 - [ ] Panda
 - [ ] Polar Bear
-- [X] Wolf
 - [ ] Armadillo
 - [ ] Bat
 - [ ] Camel
-- [ ] Cat / Ocelot
 - [ ] Chicken
 - [ ] Sheep
 - [ ] Cow / Mooshroom
@@ -75,15 +60,24 @@ Here is a comprehensive checklist of all official Minecraft mobs to the current 
 - [ ] Parrot
 - [ ] Pig
 - [ ] Rabbit
-
 - [ ] Dolphin
 - [ ] Axolotl
 - [ ] Frog
-- [ ] Pufferfish - **low**
-- [ ] Salmon / Cod - **low**
 - [ ] Squid / Glow Squid
 - [ ] Tropical Fish
 - [ ] Turtle
+
+- [ ] Pillager - **low**
+- [ ] Vindicator - **low**
+- [ ] Evoker - **low**
+- [ ] Witch - **low**
+- [ ] Creeper - **low**
+- [ ] Phantom - **low**
+- [ ] Spider / Cave Spider - **low**
+- [ ] Endermite **low**
+- [ ] Silverfish **low**
+- [ ] Pufferfish - **low**
+- [ ] Salmon / Cod - **low**
 
 </details>
 
@@ -95,8 +89,8 @@ You may use this mod in modpacks, videos, servers, and other projects. A link ba
 
 ## Credits
 
-Made it Solo Babyy!!
-Inspired by TerrariumMC's [Handcrafted](https://modrinth.com/mod/handcrafted)
+- Made it Solo Babyy!!
+- Inspired by TerrariumMC's [Handcrafted](https://modrinth.com/mod/handcrafted)
 
 ## License
 

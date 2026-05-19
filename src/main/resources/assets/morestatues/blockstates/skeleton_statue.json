@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "facing=north,half=lower": { "model": "morestatues:block/skeleton_statue" },
+    "facing=south,half=lower": { "model": "morestatues:block/skeleton_statue", "y": 180 },
+    "facing=east,half=lower": { "model": "morestatues:block/skeleton_statue", "y": 90 },
+    "facing=west,half=lower": { "model": "morestatues:block/skeleton_statue", "y": 270 },
+    "half=upper": { "model": "morestatues:block/skeleton_statue" }
+  }
+}

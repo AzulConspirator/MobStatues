@@ -19,7 +19,6 @@ public class MoreStatueBlockItem extends BlockItem implements GeoItem {
         super(block, properties);
     }
 
-    // Connect GeckoLib's special rendering hooks directly into the item properties pipeline
     @Override
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {
         consumer.accept(new IClientItemExtensions() {
@@ -37,7 +36,6 @@ public class MoreStatueBlockItem extends BlockItem implements GeoItem {
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        // Trophies usually don't need active movement animations inside the inventory grid
     }
 
     @Override

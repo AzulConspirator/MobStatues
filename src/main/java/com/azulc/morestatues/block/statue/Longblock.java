@@ -17,7 +17,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.storage.loot.LootParams;
@@ -70,7 +69,7 @@ public class Longblock extends baseblock{
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, PART);
+        builder.add(FACING, WATERLOGGED, PART,VARIANT);
     }
 
     @Override
@@ -92,7 +91,7 @@ public class Longblock extends baseblock{
 
         Level level = context.getLevel();
         if (level.getBlockState(headPos).canBeReplaced(context) && level.getWorldBorder().isWithinBounds(headPos)) {
-            return this.defaultBlockState().setValue(FACING, facing).setValue(PART, BedPart.FOOT);
+            return this.defaultBlockState().setValue(FACING, facing).setValue(PART, BedPart.FOOT).setValue(VARIANT, 0);
         }
         return null;
     }

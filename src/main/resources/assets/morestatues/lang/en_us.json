@@ -1,16 +1,16 @@
 {
   "itemGroup.morestatues": "More Statues",
-
+  "tooltip.morestatues.has_variants": "§7has §7§b%d§b §7variants§7",
   "block.morestatues.zombie_statue": "Zombie Statue",
   "block.morestatues.enderman_statue": "Enderman Statue",
-  "block.morestatues.skeleton_statue": "Skeleton Statue",
+  "block.morestatues.skeleton_statue": "Skeleton Display",
   "block.morestatues.wolf_statue": "Wolf Statue",
+  "block.morestatues.ocelot_statue": "Cat Statue",
   "block.morestatues.slime_statue": "Slime in a Jar",
   
-
   "block.morestatues.allay_statue": "Allay Plaque",
   "block.morestatues.vex_statue": "Vex Plaque",
-  "block.morestatues.ravager_statue": "Ravager Wall Mount",
+  "block.morestatues.ravager_statue": "Ravager Plaque",
 
   "block.morestatues.guardian_statue": "Encased Guardian",
   "block.morestatues.bosswither_statue": "Hanging Wither",

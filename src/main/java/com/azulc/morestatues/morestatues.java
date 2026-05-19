@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.slf4j.Logger;
 
+import com.azulc.morestatues.block.base.variantRegistry;
 import com.azulc.morestatues.block.entity.MoreStatueBlockItem;
 import com.azulc.morestatues.block.entity.MoreStatueEntityBlock;
 import com.azulc.morestatues.block.entity.client.renderer.DynamicStatueRenderer;
@@ -50,38 +51,50 @@ public class morestatues
     public static final constants CONSTANTS = new constants();
     // ---------------------------------------
     //#region Register Blocks
-    public static final DeferredBlock<Block> ZOMBIE_STATUE          = registerStatue("zombie_statue", StatueVariant.LONG);
-    public static final DeferredBlock<Block> GUARDIAN_STATUE        = registerStatue("guardian_statue", StatueVariant.LONG, RenderStyle.COMPOSITE_ICE,Shapes.block());
+    public static final DeferredBlock<Block> ZOMBIE_STATUE                  = registerStatue("zombie_statue", StatueType.LONG);
+    public static final DeferredBlock<Block> GUARDIAN_STATUE                = registerStatue("guardian_statue", StatueType.LONG, RenderStyle.COMPOSITE_ICE,Shapes.block());
     //
-    public static final DeferredBlock<Block> WOLF_STATUE            = registerStatue("wolf_statue", StatueVariant.TALL,Block.box(2, 0, 2, 14, 18, 14));
-    public static final DeferredBlock<Block> GHAST_STATUE           = registerStatue("ghast_statue", StatueVariant.TALL,CONSTANTS.GhastShape());
-    public static final DeferredBlock<Block> GHAST_FIREBALL_STATUE  = registerStatue("ghast_fireball_statue", StatueVariant.TALL); 
-    public static final DeferredBlock<Block> ENDERMAN_STATUE        = registerStatue("enderman_statue", StatueVariant.TALL);
-    //public static final DeferredBlock<Block> SKELETON_STATUE      = registerStatue("skeleton_statue", StatueVariant.TALL);
-    //public static final DeferredBlock<Block> WITHER_SKELETON_STATUE      = registerStatue("wither_skeleton_statue", StatueVariant.TALL);
+    public static final DeferredBlock<Block> WOLF_STATUE                    = registerStatue("wolf_statue", StatueType.TALL,Block.box(2, 0, 2, 14, 18, 14));
+    public static final DeferredBlock<Block> OCELOT_STATUE                    = registerStatue("ocelot_statue", StatueType.TALL,Block.box(2, 0, 2, 14, 18, 14));
+    public static final DeferredBlock<Block> GHAST_STATUE                   = registerStatue("ghast_statue", StatueType.TALL,CONSTANTS.GhastShape());
+    public static final DeferredBlock<Block> GHAST_FIREBALL_STATUE          = registerStatue("ghast_fireball_statue", StatueType.TALL); 
+    public static final DeferredBlock<Block> ENDERMAN_STATUE                = registerStatue("enderman_statue", StatueType.TALL);
+    public static final DeferredBlock<Block> SKELETON_STATUE              = registerStatue("skeleton_statue", StatueType.TALL);
+    //public static final DeferredBlock<Block> WITHER_SKELETON_STATUE       = registerStatue("wither_skeleton_statue", StatueType.TALL);
     //
-    public static final DeferredBlock<Block> BOSSWITHER_STATUE      = registerStatue("bosswither_statue", StatueVariant.WALL,Block.box(-1, -26, 1, 17, 16, 14));
-    public static final DeferredBlock<Block> VEX_STATUE             = registerStatue("vex_statue", StatueVariant.WALL, RenderStyle.TRANSLUCENT);
-    public static final DeferredBlock<Block> ALLAY_STATUE           = registerStatue("allay_statue", StatueVariant.WALL, RenderStyle.TRANSLUCENT);
-    public static final DeferredBlock<Block> BLAZE_STATUE           = registerStatue("blaze_statue", StatueVariant.WALL,Block.box(2, 0, 2, 14, 12, 14));
-    public static final DeferredBlock<Block> BREEZE_STATUE          = registerStatue("breeze_statue", StatueVariant.WALL,RenderStyle.COMPOSITE_ICE,Block.box(2, 0, 2, 14, 12, 14));
-    public static final DeferredBlock<Block> PIGLIN_BRUTE_STATUE    = registerStatue("piglin_brute_statue", StatueVariant.WALL,Block.box(2, 0, 2, 14, 18, 14));
-    public static final DeferredBlock<Block> RAVAGER_STATUE         = registerStatue("ravager_statue", StatueVariant.WALL);
-    public static final DeferredBlock<Block> SLIME_STATUE           = registerStatue("slime_statue", StatueVariant.WALL,RenderStyle.COMPOSITE_ICE,Block.box(2, 0, 2, 14, 14, 14));
-    public static final DeferredBlock<Block> MAGMACUBE_STATUE       = registerStatue("magmacube_statue", StatueVariant.WALL,Block.box(2, 0, 2, 14, 14, 14));
+    public static final DeferredBlock<Block> BOSSWITHER_STATUE              = registerStatue("bosswither_statue", StatueType.WALL,Block.box(-1, -26, 1, 17, 16, 14));
+    public static final DeferredBlock<Block> VEX_STATUE                     = registerStatue("vex_statue", StatueType.WALL, RenderStyle.TRANSLUCENT);
+    public static final DeferredBlock<Block> ALLAY_STATUE                   = registerStatue("allay_statue", StatueType.WALL, RenderStyle.TRANSLUCENT);
+    public static final DeferredBlock<Block> BLAZE_STATUE                   = registerStatue("blaze_statue", StatueType.WALL,Block.box(2, 0, 2, 14, 12, 14));
+    public static final DeferredBlock<Block> BREEZE_STATUE                  = registerStatue("breeze_statue", StatueType.WALL,RenderStyle.COMPOSITE_ICE,Block.box(2, 0, 2, 14, 12, 14));
+    public static final DeferredBlock<Block> PIGLIN_BRUTE_STATUE            = registerStatue("piglin_brute_statue", StatueType.WALL,Block.box(2, 0, 2, 14, 18, 14));
+    public static final DeferredBlock<Block> RAVAGER_STATUE                 = registerStatue("ravager_statue", StatueType.WALL,CONSTANTS.RavagerShape());
+    public static final DeferredBlock<Block> SLIME_STATUE                   = registerStatue("slime_statue", StatueType.WALL,RenderStyle.COMPOSITE_ICE,Block.box(2, 0, 2, 14, 14, 14));
+    public static final DeferredBlock<Block> MAGMACUBE_STATUE               = registerStatue("magmacube_statue", StatueType.WALL,Block.box(2, 0, 2, 14, 14, 14));
+    
+    //#region Register Variant Blocks
+    private void registerDefaultVariants() 
+    {
+        variantRegistry.register("zombie_statue", 1, false, "idle", true, "husk");
+        variantRegistry.register("zombie_statue", 2, false, "idle", true, "drowned");
+        variantRegistry.register("skeleton_statue", 1, false, "idle", true, "stray");
+        variantRegistry.register("skeleton_statue", 2, false, "idle", true, "bogged");
+        variantRegistry.register("ghast_statue", 1, false, "idle", true, "calm");
+    }
+    //#endregion
     //#endregion
     // ---------------------------------------
     //#region Registration Helpers
-    private static DeferredBlock<Block> registerStatue(String id, StatueVariant variant) {
+    private static DeferredBlock<Block> registerStatue(String id, StatueType variant) {
         return registerStatue(id, variant, RenderStyle.SOLID,null);
     }
-    private static DeferredBlock<Block> registerStatue(String id, StatueVariant variant, VoxelShape shape) {
+    private static DeferredBlock<Block> registerStatue(String id, StatueType variant, VoxelShape shape) {
         return registerStatue(id, variant, RenderStyle.SOLID, shape);
     }
-    private static DeferredBlock<Block> registerStatue(String id, StatueVariant variant, RenderStyle style) {
+    private static DeferredBlock<Block> registerStatue(String id, StatueType variant, RenderStyle style) {
         return registerStatue(id, variant, style, null);
     }
-    private static DeferredBlock<Block> registerStatue(String id, StatueVariant variant, RenderStyle style, VoxelShape shape) {
+    private static DeferredBlock<Block> registerStatue(String id, StatueType variant, RenderStyle style, VoxelShape shape) {
         BlockBehaviour.Properties props = BlockBehaviour.Properties.of()
             .mapColor(MapColor.STONE)
             .strength(2.0f, 6.0f)
@@ -96,14 +109,15 @@ public class morestatues
         { STATUE_SHAPES.put(id, shape); }
         return registeredBlock;
     }
+    
     //#endregion
     // ---------------------------------------
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<MoreStatueEntityBlock>> STATUE_ENTITY = BLOCK_ENTITIES.register("more_statue_entity_block", () -> {Block[] validBlocks = BLOCKS.getEntries().stream().map(DeferredHolder::get).toArray(Block[]::new); BlockEntityType.Builder<MoreStatueEntityBlock> builder = BlockEntityType.Builder.of(MoreStatueEntityBlock::new, validBlocks); return (BlockEntityType<MoreStatueEntityBlock>) builder.build(null);});
     // ---------------------------------------
-    // Register CreativeModeTabs
-    // ---------------------------------------
+    //#region Register CreativeModeTabs
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> STATUE_TAB = CREATIVE_MODE_TABS.register(MODID, () -> CreativeModeTab.builder().title(Component.translatable("itemGroup." + MODID)).withTabsBefore(CreativeModeTabs.COMBAT).icon(() -> Blocks.GOLD_BLOCK.asItem().getDefaultInstance()).displayItems((parameters, output) -> { BLOCKS.getEntries().forEach(block -> output.accept(block.get()));}).build());    
+    //#endregion
     // ---------------------------------------
     // Constructor & Event Listeners
     // ---------------------------------------
@@ -117,10 +131,13 @@ public class morestatues
         CREATIVE_MODE_TABS.register(modEventBus);
         NeoForge.EVENT_BUS.register(this);
     }
-    private void commonSetup(FMLCommonSetupEvent event) {
+    private void commonSetup(FMLCommonSetupEvent event) 
+    {
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
+        registerDefaultVariants();
     }
+
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
         LOGGER.info("HELLO from server starting");
