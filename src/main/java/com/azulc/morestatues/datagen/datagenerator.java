@@ -24,6 +24,7 @@ public class datagenerator {
     {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
+        @SuppressWarnings("unused")
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<Provider> lookupProvider = event.getLookupProvider();
         //data providers

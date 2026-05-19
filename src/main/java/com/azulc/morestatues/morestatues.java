@@ -63,11 +63,12 @@ public class morestatues
     public static final DeferredBlock<Block> BOSSWITHER_STATUE      = registerStatue("bosswither_statue", StatueVariant.WALL,Block.box(-1, -26, 1, 17, 16, 14));
     public static final DeferredBlock<Block> VEX_STATUE             = registerStatue("vex_statue", StatueVariant.WALL, RenderStyle.TRANSLUCENT);
     public static final DeferredBlock<Block> ALLAY_STATUE           = registerStatue("allay_statue", StatueVariant.WALL, RenderStyle.TRANSLUCENT);
-    public static final DeferredBlock<Block> BLAZE_STATUE           = registerStatue("blaze_statue", StatueVariant.WALL,Block.box(2, 0, 2, 14, 14, 14));
-    public static final DeferredBlock<Block> BREEZE_STATUE          = registerStatue("breeze_statue", StatueVariant.WALL,RenderStyle.COMPOSITE_ICE,Block.box(2, 0, 2, 14, 14, 14));
+    public static final DeferredBlock<Block> BLAZE_STATUE           = registerStatue("blaze_statue", StatueVariant.WALL,Block.box(2, 0, 2, 14, 12, 14));
+    public static final DeferredBlock<Block> BREEZE_STATUE          = registerStatue("breeze_statue", StatueVariant.WALL,RenderStyle.COMPOSITE_ICE,Block.box(2, 0, 2, 14, 12, 14));
     public static final DeferredBlock<Block> PIGLIN_BRUTE_STATUE    = registerStatue("piglin_brute_statue", StatueVariant.WALL,Block.box(2, 0, 2, 14, 18, 14));
     public static final DeferredBlock<Block> RAVAGER_STATUE         = registerStatue("ravager_statue", StatueVariant.WALL);
     public static final DeferredBlock<Block> SLIME_STATUE           = registerStatue("slime_statue", StatueVariant.WALL,RenderStyle.COMPOSITE_ICE,Block.box(2, 0, 2, 14, 14, 14));
+    public static final DeferredBlock<Block> MAGMACUBE_STATUE       = registerStatue("magmacube_statue", StatueVariant.WALL,Block.box(2, 0, 2, 14, 14, 14));
     //#endregion
     // ---------------------------------------
     //#region Registration Helpers
@@ -83,6 +84,7 @@ public class morestatues
     private static DeferredBlock<Block> registerStatue(String id, StatueVariant variant, RenderStyle style, VoxelShape shape) {
         BlockBehaviour.Properties props = BlockBehaviour.Properties.of()
             .mapColor(MapColor.STONE)
+            .strength(2.0f, 6.0f)
             .noOcclusion()
             .isSuffocating((blkState, blockGetter, pos) -> false);
 

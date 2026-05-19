@@ -3,13 +3,13 @@
   "category": "misc",
   "key": {
     "A": {
-      "item": "minecraft:prismarine_shard"
+      "item": "minecraft:basalt"
     },
     "B": {
-      "item": "minecraft:prismarine_crystals"
+      "item": "minecraft:blackstone"
     },
     "S": {
-      "item": "minecraft:ice"
+      "item": "minecraft:magma_cream"
     }
   },
   "pattern": [
@@ -19,6 +19,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "morestatues:guardian_statue"
+    "id": "morestatues:magmacube_statue"
   }
 }

@@ -6,10 +6,10 @@
       "item": "minecraft:zombie_head"
     },
     "B": {
-      "item": "minecraft:rotten_flesh"
+      "item": "minecraft:stone"
     },
     "S": {
-      "item": "minecraft:stick"
+      "item": "minecraft:rotten_flesh"
     }
   },
   "pattern": [

@@ -6,6 +6,7 @@
   "block.morestatues.skeleton_statue": "Skeleton Statue",
   "block.morestatues.wolf_statue": "Wolf Statue",
   "block.morestatues.slime_statue": "Slime in a Jar",
+  
 
   "block.morestatues.allay_statue": "Allay Plaque",
   "block.morestatues.vex_statue": "Vex Plaque",
@@ -16,8 +17,8 @@
 
   "block.morestatues.ghast_statue": "Ghast Statue",
   "block.morestatues.ghast_fireball_statue": "Fireball Replica",
+  "block.morestatues.piglin_brute_statue": "Piglin Brute Exhibit",
+  "block.morestatues.magmacube_statue": "Magma Cube Display",
   "block.morestatues.blaze_statue": "Blaze Display",
-  "block.morestatues.piglin_brute_statue": "Piglin Brute Statue",
-
   "block.morestatues.breeze_statue": "Breeze Display"
 }

@@ -5,54 +5,39 @@
     64,
     64
   ],
-  "textures": {
-    "all": "morestatues:block/zombie_statue",
-		"particle": "morestatues:block/zombie_statue"
+    "textures": {
+    "all": "morestatues:block/magmacube_statue",
+		"particle": "morestatues:block/magmacube_statue"
 	},
   "display": {
     "thirdperson_righthand": {
       "rotation": [
-        75,
-        45,
-        0
-      ],
-      "translation": [
         0,
-        2.5,
+        124,
         0
       ],
       "scale": [
-        0.375,
-        0.375,
-        0.375
+        0.4,
+        0.4,
+        0.4
       ]
     },
     "thirdperson_lefthand": {
       "rotation": [
-        75,
-        45,
-        0
-      ],
-      "translation": [
         0,
-        2.5,
+        124,
         0
       ],
       "scale": [
-        0.375,
-        0.375,
-        0.375
+        0.4,
+        0.4,
+        0.4
       ]
     },
     "firstperson_righthand": {
       "rotation": [
         0,
-        45,
-        0
-      ],
-      "translation": [
-        5.25,
-        -2.25,
+        124,
         0
       ],
       "scale": [
@@ -64,12 +49,7 @@
     "firstperson_lefthand": {
       "rotation": [
         0,
-        45,
-        0
-      ],
-      "translation": [
-        5.25,
-        -2.25,
+        124,
         0
       ],
       "scale": [
@@ -81,59 +61,49 @@
     "ground": {
       "translation": [
         0,
-        -2.25,
-        2.25
-      ],
-      "scale": [
-        0.5,
-        0.5,
-        0.5
-      ]
-    },
-    "gui": {
-      "rotation": [
-        30,
-        38,
+        -0.5,
         0
-      ],
-      "translation": [
-        2.75,
-        -3.75,
-        0
-      ],
-      "scale": [
-        0.55,
-        0.55,
-        0.55
-      ]
-    },
-    "head": {
-      "translation": [
-        0,
-        6.5,
-        3
-      ],
-      "scale": [
-        0.4,
-        0.4,
-        0.4
-      ]
-    },
-    "fixed": {
-      "rotation": [
-        -90,
-        180,
-        0
-      ],
-      "translation": [
-        0,
-        -4.5,
-        1
       ],
       "scale": [
         0.63,
         0.63,
         0.63
+      ]
+    },
+    "gui": {
+      "rotation": [
+        30,
+        164,
+        0
+      ],
+      "translation": [
+        0,
+        -4.75,
+        0
+      ],
+      "scale": [
+        0.62,
+        0.62,
+        0.62
+      ]
+    },
+    "head": {
+      "translation": [
+        0,
+        5,
+        0
+      ]
+    },
+    "fixed": {
+      "translation": [
+        0,
+        -8,
+        0
+      ],
+      "scale": [
+        0.9,
+        0.9,
+        0.9
       ]
     }
   }

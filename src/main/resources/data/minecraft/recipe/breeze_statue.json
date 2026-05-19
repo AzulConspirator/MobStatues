@@ -3,13 +3,13 @@
   "category": "misc",
   "key": {
     "A": {
-      "item": "minecraft:breeze_rod"
-    },
-    "B": {
       "item": "minecraft:wind_charge"
     },
+    "B": {
+      "item": "minecraft:tuff_bricks"
+    },
     "S": {
-      "item": "minecraft:stick"
+      "item": "minecraft:breeze_rod"
     }
   },
   "pattern": [

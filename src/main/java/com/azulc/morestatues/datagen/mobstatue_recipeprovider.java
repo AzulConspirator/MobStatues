@@ -35,20 +35,21 @@ public class mobstatue_recipeprovider extends RecipeProvider implements IConditi
                 //case "wither_skeleton_statue" -> Items.STONE_SWORD;
                 //case "piglin_statue" -> Items.PIGLIN_HEAD;
                 //case "stray_statue" -> Items.STRAY_SPAWN_EGG;
-                case "zombie_statue" -> new Item[]{Items.STICK, Items.ZOMBIE_HEAD, Items.ROTTEN_FLESH};
+                case "zombie_statue" -> new Item[]{Items.ROTTEN_FLESH, Items.ZOMBIE_HEAD, Items.STONE};
                 case "enderman_statue" -> new Item[]{Items.STICK, Items.ENDER_PEARL, Items.ENDER_EYE};
-                case "guardian_statue" -> new Item[]{Items.STICK, Items.PRISMARINE_SHARD, Items.PRISMARINE_CRYSTALS};
+                case "guardian_statue" -> new Item[]{Items.ICE, Items.PRISMARINE_SHARD, Items.PRISMARINE_CRYSTALS};
                 case "bosswither_statue" -> new Item[]{Items.STICK, Items.WITHER_SKELETON_SKULL,Items.WITHER_ROSE};
-                case "blaze_statue" -> new Item[]{Items.STICK, Items.BLAZE_ROD,Items.BLAZE_POWDER};
-                case "breeze_statue" -> new Item[]{Items.STICK, Items.BREEZE_ROD,Items.WIND_CHARGE};
-                case "wolf_statue" -> new Item[]{Items.STICK, Items.BEEF, Items.BONE};
+                case "blaze_statue" -> new Item[]{Items.BLAZE_ROD, Items.BLAZE_POWDER,Items.NETHER_BRICKS};
+                case "breeze_statue" -> new Item[]{Items.BREEZE_ROD, Items.WIND_CHARGE,Items.TUFF_BRICKS};
+                case "wolf_statue" -> new Item[]{Items.STONE, Items.BEEF, Items.BONE};
                 case "ghast_statue" -> new Item[]{Items.STICK, Items.GHAST_TEAR, Items.GUNPOWDER};
-                case "piglin_brute_statue" -> new Item[]{Items.STICK, Items.PIGLIN_HEAD, Items.GOLD_INGOT};
+                case "piglin_brute_statue" -> new Item[]{Items.BLACKSTONE, Items.PIGLIN_HEAD, Items.GOLD_INGOT};
                 case "ghast_fireball_statue" -> new Item[]{Items.STICK, Items.FIRE_CHARGE,Items.STICK};
                 case "allay_statue" -> new Item[]{Items.STICK, Items.COOKIE, Items.SWEET_BERRIES};
                 case "vex_statue" -> new Item[]{Items.STICK, Items.IRON_SWORD, Items.IRON_INGOT};
                 case "ravager_statue" -> new Item[]{Items.STICK, Items.SADDLE, Items.IRON_INGOT};
-                case "slime_statue" -> new Item[]{Items.STICK, Items.SLIME_BALL,Items.GLASS};
+                case "slime_statue" -> new Item[]{Items.GLASS, Items.SLIME_BALL,Items.GLASS};
+                case "magmacube_statue" -> new Item[]{Items.MAGMA_CREAM, Items.BASALT,Items.BLACKSTONE};
                 default -> null; // Handle unexpected cases
             };
             if (item != null) {

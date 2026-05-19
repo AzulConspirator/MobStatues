@@ -3,13 +3,13 @@
   "category": "misc",
   "key": {
     "A": {
-      "item": "minecraft:blaze_rod"
-    },
-    "B": {
       "item": "minecraft:blaze_powder"
     },
+    "B": {
+      "item": "minecraft:nether_bricks"
+    },
     "S": {
-      "item": "minecraft:stick"
+      "item": "minecraft:blaze_rod"
     }
   },
   "pattern": [
