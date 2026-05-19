@@ -24,10 +24,13 @@ public class datagenerator {
     {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
+        @SuppressWarnings("unused")
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<Provider> lookupProvider = event.getLookupProvider();
-    
+        //data providers
         generator.addProvider(event.includeServer(),new LootTableProvider(output, Collections.emptySet(),List.of(new LootTableProvider.SubProviderEntry(blockloottableprovider::new, LootContextParamSets.BLOCK)), lookupProvider));
+        generator.addProvider(event.includeServer(), new mobstatue_recipeprovider(output, lookupProvider));
+        //asset providers
         //generator.addProvider(event.includeClient(), new blockstateprovider(output, existingFileHelper));
         //generator.addProvider(event.includeClient(), new Itemmodelprovider(output, existingFileHelper));
     }

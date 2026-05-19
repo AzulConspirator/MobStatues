@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:basalt"
+    },
+    "B": {
+      "item": "minecraft:blackstone"
+    },
+    "S": {
+      "item": "minecraft:magma_cream"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SAS",
+    "SBS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "morestatues:magmacube_statue"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:wind_charge"
+    },
+    "B": {
+      "item": "minecraft:tuff_bricks"
+    },
+    "S": {
+      "item": "minecraft:breeze_rod"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SAS",
+    "SBS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "morestatues:breeze_statue"
+  }
+}

@@ -5,6 +5,10 @@
     64,
     64
   ],
+  "textures": {
+    "all": "morestatues:block/zombie_statue",
+		"particle": "morestatues:block/zombie_statue"
+	},
   "display": {
     "thirdperson_righthand": {
       "rotation": [

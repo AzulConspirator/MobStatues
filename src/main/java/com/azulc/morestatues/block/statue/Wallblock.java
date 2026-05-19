@@ -62,4 +62,5 @@ public class Wallblock extends baseblock {
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new MoreStatueEntityBlock(pos, state);
     }
+
 }

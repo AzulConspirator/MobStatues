@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:zombie_head"
+    },
+    "B": {
+      "item": "minecraft:stone"
+    },
+    "S": {
+      "item": "minecraft:rotten_flesh"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SAS",
+    "SBS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "morestatues:zombie_statue"
+  }
+}

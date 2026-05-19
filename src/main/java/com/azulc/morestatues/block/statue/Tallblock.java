@@ -23,10 +23,15 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+
+import java.util.Collections;
+import java.util.List;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -145,5 +150,13 @@ public class Tallblock extends baseblock {
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new MoreStatueEntityBlock(pos, state);
+    }
+
+    @Override
+    public @NotNull List<ItemStack> getDrops(BlockState state, LootParams.Builder params) {
+        if (state.getValue(HALF) == DoubleBlockHalf.LOWER) {
+            return super.getDrops(state, params);
+        }
+        return Collections.emptyList();
     }
 }

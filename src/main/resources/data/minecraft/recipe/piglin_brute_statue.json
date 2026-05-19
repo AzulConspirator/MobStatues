@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:piglin_head"
+    },
+    "B": {
+      "item": "minecraft:gold_ingot"
+    },
+    "S": {
+      "item": "minecraft:blackstone"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SAS",
+    "SBS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "morestatues:piglin_brute_statue"
+  }
+}
