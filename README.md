@@ -16,7 +16,7 @@ Here is a comprehensive checklist of all official Minecraft mobs to the current 
   <summary>Click here to expand</summary>
 ---
 
-- [ ] Breeze - **Focused**
+- [X] Breeze - **Focused**
 - [X] Blaze - **Focused**
 
 - [ ] Creeper - **low**
@@ -24,7 +24,7 @@ Here is a comprehensive checklist of all official Minecraft mobs to the current 
 - [X] Zombie / Husk / Drowned
 - [ ] Skeleton / Bogged / Stray
 - [ ] Skeleton Horseman
-- [ ] Slime - **Focused**
+- [X] Slime - **Focused**
 - [ ] Spider / Cave Spider - **low**
 
 - [X] Enderman
@@ -49,7 +49,7 @@ Here is a comprehensive checklist of all official Minecraft mobs to the current 
 - [ ] Sniffer
 
 - [ ] Pillager - **low**
-- [ ] Ravager - **Focused**
+- [X] Ravager - **Focused**
 - [X] Vex
 - [ ] Vindicator - **low**
 - [ ] Evoker - **low**
