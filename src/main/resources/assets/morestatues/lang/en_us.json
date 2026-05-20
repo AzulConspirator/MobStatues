@@ -1,6 +1,6 @@
 {
   "itemGroup.morestatues": "More Statues",
-  "tooltip.morestatues.has_variants": "§7has §7§b%d§b §7variants§7",
+  "tooltip.morestatues.has_variants": "§7has§7 §b%d§b §7variants§7",
   "block.morestatues.zombie_statue": "Zombie Statue",
   "block.morestatues.enderman_statue": "Enderman Statue",
   "block.morestatues.skeleton_statue": "Skeleton Display",
