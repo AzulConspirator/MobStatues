@@ -28,6 +28,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
@@ -36,17 +37,21 @@ import net.minecraft.world.phys.BlockHitResult;
 public abstract class baseblock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock,EntityBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final IntegerProperty VARIANT = IntegerProperty.create("variant", 0, 10);
+    public static final IntegerProperty POSE = IntegerProperty.create("pose", 0, 10);
+    
     public baseblock(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.defaultBlockState()
+        this.registerDefaultState(
+            this.defaultBlockState()
             .setValue(FACING, Direction.NORTH)
-            .setValue(WATERLOGGED, false).setValue(VARIANT, 0));
-            
+            .setValue(WATERLOGGED, false)
+            .setValue(VARIANT, 0)
+            .setValue(POSE, 0));
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, VARIANT);
+        builder.add(FACING, WATERLOGGED, VARIANT,POSE);
     }
 
     @Override
@@ -70,40 +75,78 @@ public abstract class baseblock extends HorizontalDirectionalBlock implements Si
 
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-        if (stack.is(Items.STICK)) {
-            if (!level.isClientSide) {
+        if (stack.is(Items.STICK)) 
+        {
+            if (!level.isClientSide) 
+            {
                 String blockId = BuiltInRegistries.BLOCK.getKey(state.getBlock()).getPath();
-                int maxVariant = variantRegistry.getMaxVariant(blockId);
-
-                if (maxVariant > 0) {
+                int maxVariant = variantRegistry.getMaxTexVariant(blockId);
+                if (maxVariant > 0) 
+                {
                     int currentVariant = state.getValue(VARIANT);
                     int nextVariant = (currentVariant + 1) > maxVariant ? 0 : currentVariant + 1;
-
-                    // 1. Update the clicked block state directly
-                    BlockState newState = state.setValue(VARIANT, nextVariant);
-                    level.setBlockAndUpdate(pos, newState);
-
-                    // 2. Structural Sync Strategy:
-                    // Handle Tallblocks (Vertical Sibling Alignment)
-                    if (state.hasProperty(BlockStateProperties.DOUBLE_BLOCK_HALF)) {
-                        var half = state.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF);
-                        BlockPos siblingPos = half == net.minecraft.world.level.block.state.properties.DoubleBlockHalf.LOWER ? pos.above() : pos.below();
-                        BlockState siblingState = level.getBlockState(siblingPos);
-                        if (siblingState.is(this)) {
-                            level.setBlockAndUpdate(siblingPos, siblingState.setValue(VARIANT, nextVariant));
-                        }
+                    BlockPos siblingPos = null;
+                    // Vertical multi-blocks (Tallblock)
+                    if (state.hasProperty(BlockStateProperties.DOUBLE_BLOCK_HALF)) 
+                    {
+                        boolean isLower = state.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.LOWER;
+                        siblingPos = isLower ? pos.above() : pos.below();
                     }
-                    
-                    if (state.hasProperty(BlockStateProperties.BED_PART)) {
+                    // Horizontal multi-blocks (Longblock)
+                    else if (state.hasProperty(BlockStateProperties.BED_PART)) 
+                    {
                         Direction facing = state.getValue(FACING);
-                        BlockPos siblingPos = state.getValue(BlockStateProperties.BED_PART) == BedPart.FOOT ? pos.relative(facing.getClockWise()) : pos.relative(facing.getCounterClockWise());
+                        boolean isFoot = state.getValue(BlockStateProperties.BED_PART) == BedPart.FOOT;
+                        siblingPos = isFoot ? pos.relative(facing) : pos.relative(facing.getOpposite());
+                    }
+                    level.setBlockAndUpdate(pos, state.setValue(VARIANT, nextVariant));
+                    // Update the sibling block if it exists and matches
+                    if (siblingPos != null) 
+                    {
                         BlockState siblingState = level.getBlockState(siblingPos);
-                        if (siblingState.is(this)) {
+                        if (siblingState.is(this)) 
+                        {
                             level.setBlockAndUpdate(siblingPos, siblingState.setValue(VARIANT, nextVariant));
                         }
                     }
-                    
-                    
+                    return ItemInteractionResult.SUCCESS;
+                }
+            }
+            return ItemInteractionResult.sidedSuccess(level.isClientSide);
+        }
+        if (stack.is(Items.BONE)) {
+            if (!level.isClientSide) 
+            {
+                String blockId = BuiltInRegistries.BLOCK.getKey(state.getBlock()).getPath();
+                int maxVariant = variantRegistry.getMaxPoseVariant(blockId);
+                if (maxVariant > 0) 
+                {
+                    int currentVariant = state.getValue(POSE);
+                    int nextVariant = (currentVariant + 1) > maxVariant ? 0 : currentVariant + 1;
+                    BlockPos siblingPos = null;
+                    // Vertical multi-blocks (Tallblock)
+                    if (state.hasProperty(BlockStateProperties.DOUBLE_BLOCK_HALF)) 
+                    {
+                        boolean isLower = state.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.LOWER;
+                        siblingPos = isLower ? pos.above() : pos.below();
+                    }
+                    // Horizontal multi-blocks (Longblock)
+                    else if (state.hasProperty(BlockStateProperties.BED_PART)) 
+                    {
+                        Direction facing = state.getValue(FACING);
+                        boolean isFoot = state.getValue(BlockStateProperties.BED_PART) == BedPart.FOOT;
+                        siblingPos = isFoot ? pos.relative(facing) : pos.relative(facing.getOpposite());
+                    }
+                    level.setBlockAndUpdate(pos, state.setValue(POSE, nextVariant));
+                    // Update the sibling block if it exists and matches
+                    if (siblingPos != null) 
+                    {
+                        BlockState siblingState = level.getBlockState(siblingPos);
+                        if (siblingState.is(this)) 
+                        {
+                            level.setBlockAndUpdate(siblingPos, siblingState.setValue(POSE, nextVariant));
+                        }
+                    }
                     return ItemInteractionResult.SUCCESS;
                 }
             }
@@ -116,10 +159,15 @@ public abstract class baseblock extends HorizontalDirectionalBlock implements Si
     public void appendHoverText(ItemStack stack, TooltipContext properties, List<Component> tooltip, TooltipFlag flag) 
     {
         String blockId = BuiltInRegistries.BLOCK.getKey(this).getPath();
-        int maxVariant = variantRegistry.getMaxVariant(blockId);
-        if (maxVariant > 0) {
-            int totalVariantsCount = maxVariant + 1;
+        int TexVariant = variantRegistry.getMaxTexVariant(blockId);
+        int PoseVariant = variantRegistry.getMaxPoseVariant(blockId);
+        if (TexVariant > 0) {
+            int totalVariantsCount = TexVariant + 1;
             tooltip.add(Component.translatable("tooltip.morestatues.has_variants", totalVariantsCount));
+        }
+        if (PoseVariant > 0) {
+            int totalVariantsCount = PoseVariant + 1;
+            tooltip.add(Component.translatable("tooltip.morestatues.has_poses", totalVariantsCount));
         }
         super.appendHoverText(stack, properties, tooltip, flag);
     }

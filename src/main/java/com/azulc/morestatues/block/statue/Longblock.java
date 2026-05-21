@@ -69,7 +69,7 @@ public class Longblock extends baseblock{
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, PART,VARIANT);
+        builder.add(FACING, WATERLOGGED, PART,VARIANT,POSE);
     }
 
     @Override

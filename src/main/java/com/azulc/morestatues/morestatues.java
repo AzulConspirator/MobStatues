@@ -75,11 +75,11 @@ public class morestatues
     //#region Register Variant Blocks
     private void registerDefaultVariants() 
     {
-        variantRegistry.register("zombie_statue", 1, false, "idle", true, "husk");
-        variantRegistry.register("zombie_statue", 2, false, "idle", true, "drowned");
-        variantRegistry.register("skeleton_statue", 1, false, "idle", true, "stray");
-        variantRegistry.register("skeleton_statue", 2, false, "idle", true, "bogged");
-        variantRegistry.register("ghast_statue", 1, false, "idle", true, "calm");
+        variantRegistry.TextureRegister("zombie_statue", 1, "husk");
+        variantRegistry.TextureRegister("zombie_statue", 2, "drowned");
+        variantRegistry.TextureRegister("skeleton_statue", 1, "stray");
+        variantRegistry.TextureRegister("skeleton_statue", 2,"bogged");
+        variantRegistry.TextureRegister("ghast_statue", 1, "calm");
     }
     //#endregion
     //#endregion

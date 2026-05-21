@@ -84,7 +84,7 @@ public class Tallblock extends baseblock {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, HALF, VARIANT);
+        builder.add(FACING, WATERLOGGED, HALF, VARIANT,POSE);
     }
 
     @Override

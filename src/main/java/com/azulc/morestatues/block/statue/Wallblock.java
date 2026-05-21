@@ -55,7 +55,7 @@ public class Wallblock extends baseblock {
     }
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, VARIANT);
+        builder.add(FACING, WATERLOGGED, VARIANT,POSE);
     }
     @Override
     public @NotNull RenderShape getRenderShape(BlockState state) {

@@ -31,16 +31,16 @@ public class MoreStatueEntityBlock extends BlockEntity implements GeoBlockEntity
         controllers.add(new AnimationController<>(this, "controller", 0, event -> {
             BlockState state = event.getAnimatable().getBlockState();
             String id = BuiltInRegistries.BLOCK.getKey(state.getBlock()).getPath();
-            int variantIndex = state.hasProperty(baseblock.VARIANT) ? state.getValue(baseblock.VARIANT) : 0;
+            int variantIndex = state.hasProperty(baseblock.POSE) ? state.getValue(baseblock.POSE) : 0;
 
             String activeAnimation = "idle"; // Fallback layout standard
 
             if (variantIndex > 0) {
-                var blockMap = variantRegistry.REGISTRY.get(id);
+                var blockMap = variantRegistry.POSE_REGISTRY.get(id);
                 if (blockMap != null) {
-                    variantRegistry.VariantData data = blockMap.get(variantIndex);
-                    if (data != null && data.hasCustomPose()) {
-                        activeAnimation = data.poseId(); // Switch directly to your declared tracking string
+                    variantRegistry.PoseVariantData data = blockMap.get(variantIndex);
+                    if (data != null) {
+                        activeAnimation = data.PoseSuffix(); // Switch directly to your declared tracking string
                     }
                 }
             }
