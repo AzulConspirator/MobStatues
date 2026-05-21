@@ -77,9 +77,15 @@ public class morestatues
     {
         variantRegistry.TextureRegister("zombie_statue", 1, "husk");
         variantRegistry.TextureRegister("zombie_statue", 2, "drowned");
+
         variantRegistry.TextureRegister("skeleton_statue", 1, "stray");
         variantRegistry.TextureRegister("skeleton_statue", 2,"bogged");
+
         variantRegistry.TextureRegister("ghast_statue", 1, "calm");
+
+        variantRegistry.TextureRegister("enderman_statue", 1,"albino");
+        variantRegistry.PoseRegister("enderman_statue", 1, "scream");
+        
     }
     //#endregion
     //#endregion

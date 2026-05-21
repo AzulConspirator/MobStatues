@@ -2,7 +2,29 @@
 	"format_version": "1.8.0",
 	"animations": {
 		"idle": {
-			"loop": true
+			"loop": true,
+			"bones": {
+				"rightArm": {
+					"rotation": {
+						"vector": [0, 0, 5]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"vector": [0, 0, -5]
+					}
+				}
+			}
+		},
+		"scream": {
+			"loop": true,
+			"bones": {
+				"hat": {
+					"position": {
+						"vector": [0, 3, 0]
+					}
+				}
+			}
 		}
 	}
 }

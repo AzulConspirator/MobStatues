@@ -1,12 +1,12 @@
 {
-	"format_version": "1.12.0",
+	"format_version": "1.21.110",
 	"minecraft:geometry": [
 		{
 			"description": {
 				"identifier": "geometry.enderman_statue",
 				"texture_width": 64,
 				"texture_height": 64,
-				"visible_bounds_width": 3,
+				"visible_bounds_width": 2,
 				"visible_bounds_height": 4,
 				"visible_bounds_offset": [0, 2, 0]
 			},
@@ -66,26 +66,6 @@
 					"pivot": [0, 37, 0],
 					"cubes": [
 						{
-							"origin": [-4, 37, -4],
-							"size": [8, 8, 8],
-							"uv": {
-								"north": {"uv": [8, 8], "uv_size": [8, 8]},
-								"east": {"uv": [0, 8], "uv_size": [8, 8]},
-								"south": {"uv": [24, 8], "uv_size": [8, 8]},
-								"west": {"uv": [16, 8], "uv_size": [8, 8]},
-								"up": {"uv": [8, 0], "uv_size": [8, 8]},
-								"down": {"uv": [16, 8], "uv_size": [8, -8]}
-							}
-						}
-					]
-				},
-				{
-					"name": "hat",
-					"parent": "head",
-					"pivot": [0, 37, 0],
-					"reset": true,
-					"cubes": [
-						{
 							"origin": [-4, 36.5, -4],
 							"size": [8, 8, 8],
 							"inflate": -0.5,
@@ -101,10 +81,29 @@
 					]
 				},
 				{
+					"name": "hat",
+					"parent": "head",
+					"pivot": [0, 37, 0],
+					"reset": true,
+					"cubes": [
+						{
+							"origin": [-4, 37, -4],
+							"size": [8, 8, 8],
+							"uv": {
+								"north": {"uv": [8, 8], "uv_size": [8, 8]},
+								"east": {"uv": [0, 8], "uv_size": [8, 8]},
+								"south": {"uv": [24, 8], "uv_size": [8, 8]},
+								"west": {"uv": [16, 8], "uv_size": [8, 8]},
+								"up": {"uv": [8, 0], "uv_size": [8, 8]},
+								"down": {"uv": [16, 8], "uv_size": [8, -8]}
+							}
+						}
+					]
+				},
+				{
 					"name": "rightArm",
 					"parent": "body",
 					"pivot": [-5, 35, 0],
-					"rotation": [0, 0, 5],
 					"reset": true,
 					"cubes": [
 						{
@@ -130,7 +129,6 @@
 					"name": "leftArm",
 					"parent": "body",
 					"pivot": [5, 35, 0],
-					"rotation": [0, 0, -5],
 					"reset": true,
 					"cubes": [
 						{
